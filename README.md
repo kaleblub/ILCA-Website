@@ -1,2 +1,2 @@
 # ILCA-Website
-Website for ULCA Bejaia
+Website for ILCA(International Learning Center in Algeria) Bejaia
