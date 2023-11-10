@@ -5,4 +5,4 @@ pip install -r requirements.txt
 
 echo "Collecting Static Files"
 # mkdir staticfiles
-python3 manage.py collectstatic --noinput
+python manage.py collectstatic --noinput
