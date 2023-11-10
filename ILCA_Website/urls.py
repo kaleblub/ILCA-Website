@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from main import views as main_views
 from about import views as about_views
 from contact import views as contact_views
@@ -30,3 +33,8 @@ urlpatterns = [
     path('register/', registration_views.registration, name='register'),
     path('login/', registration_views.CustomLoginView.as_view(), name='login'),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
