@@ -28,4 +28,5 @@ urlpatterns = [
     path('about/', about_views.about, name='about'),
     path('contact/', contact_views.contact, name='contact'),
     path('register/', registration_views.registration, name='register'),
+    path('login/', registration_views.CustomLoginView.as_view(), name='login'),
 ]
