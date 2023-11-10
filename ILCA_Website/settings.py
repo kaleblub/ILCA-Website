@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ILCA_Website.wsgi.application'
+WSGI_APPLICATION = 'ILCA_Website.wsgi.app'
 
 
 # Database
