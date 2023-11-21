@@ -4,108 +4,60 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>ILCA - International Learning Center in Algeria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="International Learning Center of Algeria.">
     <meta name="keywords" content="Learning, languages, Algeria, Bejaia, Center, International">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Home</title>
+
+    <!-- COMING SOON SECTION -->
+        <!-- Font -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+    
+    
+    <link href="{% static 'css/coming-soon-ionicons.css' %}" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+        
+    <link href="{% static 'css/coming-soon-styles.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'css/coming-soon-responsive.css' %}" rel="stylesheet">
+    <!-- COMING SOON END -->
+
+    <!-- Favicon -->
+    <link rel="stylesheet" type="text/css" href="{% static 'img/ILCA-Logo.ico' %}">
+
     <!-- Google Fonts -->
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    
+     --><!-- Vendor CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<!--     <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet"> -->
+
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> -->
 </head>
 
 <body>
-    <!-- Header Begin -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand absolute" href="{% url 'home' %}">ILCA</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="courses.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown04">
-                                <a class="dropdown-item" href="courses.html">HTML</a>
-                            </div>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav absolute-right">
-                        <li>
-                            <a href="login.html">Login</a> / <a href="{% url 'register' %}'">Register</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- Header End -->
-    <!-- Content Begin -->
     {% block content %}{% endblock content %}
-    <!-- Content End -->
-    <!-- Footer Begin -->
-    <footer>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <p class="mb-4"><img src="images/logo.png" alt="Image" class="img-fluid"></p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
-                        <p><a href="{% url 'about' %}">Learn More</a></p>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3 class="footer-heading"><span>Our Center</span></h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Acedemics</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3 class="footer-heading"><span>Our Courses</span></h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Spanish</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h3 class="footer-heading"><span>Contact</span></h3>
-                        <ul class="list-unstyled">
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="copyright">
-                            <p>
-                                Copyright ©<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-                                <script>
-                                document.write(new Date().getFullYear());
-                                </script> All rights reserved | Created by <a href="https://kalebhumpal.dev/" target="_blank">Kaleb Humpal</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'lib/jquery.sticky.js' %}"></script>
+
+    <!-- Main JavaScript File -->
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

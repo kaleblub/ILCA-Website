@@ -1,0 +1,57 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block content %}	
+	<div class="main-area">
+		
+		<section class="left-section">
+		
+			
+		</section><!-- left-section -->
+		
+		
+		<section class="right-section full-height">
+		
+			<a class="logo" href="#"><img src="{% static 'img/ILCA-Logo.jpeg' %}" alt="Logo"></a>
+			
+			<div class="display-table">
+				<div class="display-table-cell">
+					<div class="main-content">
+						<h1 class="title"><b>ILCA Bejaia's Website is Under Construction</b></h1>
+						<p class="">Our website is currently in development.
+							We should be ready for launch at the start of 2024. Thank you for your patience.</p>
+
+						<div class="email-input-area">
+							<form method="post">
+								<label for="text" class="form-label"><i>Sign up now to get notified of our launch date!</i></label><br>
+								<input class="email-input" name="email" type="text" placeholder="Enter your email"/>
+								<button class="submit-btn" name="submit" type="submit"><b>Notify me</b></button>
+							</form>
+						</div><!-- email-input-area -->
+						
+					</div><!-- main-content -->
+				</div><!-- display-table-cell -->
+			</div><!-- display-table -->
+			
+			<ul class="footer-icons">
+				<li>Connect with us elsewhere : </li>
+				<li><a href="https://facebook.com/ilca.bejaia"><i class="ion-social-facebook"></i></a></li>
+				<!-- <li><a href="https://wa.me/+213560680908"><i class="ion-social-whatsapp"></i></a></li> -->
+				<li><a href="https://www.instagram.com/ilca.bejaia"><i class="ion-social-instagram-outline"></i></a></li>
+			</ul>
+		
+		</section><!-- right-section -->
+		
+		<a href="https://api.whatsapp.com/send?phone=+213560680908&text=Hello%21%20I%20am%20looking%20for%20more%20information%20about%20the%20International%20Learning%20Center%20in%20Bejaia%20Algeria." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+	</div><!-- main-area -->
+	
+	<!-- SCIPTS -->
+	
+	<script src="common-js/jquery-3.1.1.min.js"></script>
+	
+	<script src="common-js/jquery.countdown.min.js"></script>
+	
+	<script src="common-js/scripts.js"></script>
+	
+{% endblock content %}
