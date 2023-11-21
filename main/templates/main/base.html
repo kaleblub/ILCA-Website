@@ -10,161 +10,41 @@
     <meta name="keywords" content="Learning, languages, Algeria, Bejaia, Center, International">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
+    <!-- COMING SOON SECTION -->
+        <!-- Font -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+    
+    
+    <link href="{% static 'css/coming-soon-ionicons.css' %}" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+        
+    <link href="{% static 'css/coming-soon-styles.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'css/coming-soon-responsive.css' %}" rel="stylesheet">
+    <!-- COMING SOON END -->
+
     <!-- Favicon -->
     <link rel="stylesheet" type="text/css" href="{% static 'img/ILCA-Logo.ico' %}">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Vendor CSS Files -->
+     --><!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<!--     <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet"> -->
 
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> -->
 </head>
 
 <body>
-    <!-- Header Begin -->
-    <!-- <header> -->
-        <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close">
-                <span class="icofont-close js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
-    <nav class="site-nav mb-5">
-        <div class="pb-2 top-bar mb-3">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-6 col-lg-9">
-                        <a href="#" class="medium mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have a question?</span></a>
-                        <a href="#" class="medium mr-3" id="copyPhone"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block phone-link">+213 5 6068 0908</span></a>
-                        <a href="#" class="medium mr-3" id="copyEmail"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block email-link">ilca.bejaia@gmail.com</span></a>
-                    </div>
-                    <div class="col-6 col-lg-3 text-right">
-                        <a href="{% url 'login' %}" class="medium mr-3">
-                            <span class="icon-lock"></span>
-                            Log In
-                        </a>
-                        <a href="{% url 'register' %}" class="medium">
-                            <span class="icon-person"></span>
-                            Register
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sticky-nav js-sticky-header">
-            <div class="container position-relative">
-                <div class="site-navigation text-center">
-                    <a href="{% url 'home' %}" class="logo menu-absolute m-0">ILCA<span class="text-primary">.</span></a>
-                    <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                        <li class="has-children">
-                            <a href="#">Language</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Arabic</a></li>
-                                <li><a href="#">English</a></li>
-                                <li><a href="#">French</a></li>
-                                <li><a href="#">Kabyle</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a>
-                    <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-        <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ILCA</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
-                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Language</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">Arabic</a>
-                        <a href="#" class="dropdown-item">English</a>
-                        <a href="#" class="dropdown-item">French</a>
-                        <a href="#" class="dropdown-item">Kabyle</a>
-                    </div>
-                </div>
-            <a href="{% url 'register' %}" class="btn btn-primary py-4 px-lg-5">Login/Register<i class="fa fa-arrow-right ms-3"></i></a>
-            </div>
-        </div>
-    </nav> -->
-    <!-- </header> -->
-    <!-- Header End -->
-    <!-- Content Begin -->
     {% block content %}{% endblock content %}
-    <!-- Content End -->
-    <!-- Footer Begin -->
-     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <p class="mb-4"><img src="{% static 'img/ILCA-Logo.jpeg' %}" alt="Image" class="footer-logo-image img-fluid"></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
-                    <p><a href="{% url 'about' %}">Learn More</a></p>
-                </div>
-                <div class="col-lg-3">
-                    <h3 class="footer-heading"><span>Our Center</span></h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Academics</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h3 class="footer-heading"><span>Our Courses</span></h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Spanish</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h3 class="footer-heading"><span>Contact</span></h3>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="copyright">
-                        <p>
-                            Copyright ©<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-                            <script>
-                            document.write(new Date().getFullYear());
-                            </script> All rights reserved | Created by <a href="https://kalebhumpal.dev/" target="_blank">Kaleb Humpal</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer End -->
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
