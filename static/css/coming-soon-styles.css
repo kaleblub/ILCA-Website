@@ -129,7 +129,7 @@ html {
 
 .right-section .logo{ position: absolute; top: 40px; height: 30px; }
 
-.right-section .logo img{ height: 100%; width: auto; } 
+.right-section .logo img{ height: 10rem; width: auto; } 
 
 
 .right-section .main-content{ padding: 40px 40px 40px 0; }
