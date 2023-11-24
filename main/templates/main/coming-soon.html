@@ -8,11 +8,22 @@
 
 {% block content %}
 <div class="main-area">
-    <div class="overlay"></div>
+    <div class="overlay"></div> <!-- Overlay for smaller screensizes when the background is put behind the whole page -->
     <section class="left-section">
     </section><!-- left-section -->
     <section class="right-section full-height">
-        <a class="logo" href="#"><img src="{% static 'img/ILCA-Logo.jpeg' %}" alt="Logo"></a>
+        <div class="top-bar">
+            <a class="logo" href="#"><img src="{% static 'img/ILCA-Logo-modified.png' %}" alt="Logo"></a>
+            <div class="language-selector dropdown">
+                <button href="#" id="dropdown-btn"><img class="language-icon" src="{% static 'fonts/icomoon/language-white.svg' %}"></img><img class="arrow-down" src="{% static 'fonts/icomoon/cheveron-down.svg' %}"></button>
+                <ul class="dropdown-content" id="dropdown-content">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Français</a></li>
+                    <li><a href="#">العربية</a></li>
+                    <li><a href="#">Taqbaylit</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="display-table">
             <div class="display-table-cell">
                 <div class="main-content">
