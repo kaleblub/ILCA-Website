@@ -100,7 +100,7 @@ html {
 
 .font-white{ color: #fff; }
 
-.main-area{ position: relative; height: 100vh; }/*background: #0C0D0F; color: #fff; }*/
+.main-area{ position: relative; height: 100vh; z-index: 2; }/*background: #0C0D0F; color: #fff; }*/
 
 
 /* ---------------------------------
@@ -109,6 +109,34 @@ html {
 
 .left-section{ position: absolute; top: 0; bottom: 0; left: 0; width: 50%; background-size: cover; background-image: url(../images/coming-soon.jpeg); }
 
+@media (max-width: 992px) {
+    .left-section { display: none; }
+    .right-section { height: 100% !important; }
+    .main-area {
+        width: 100%;
+        height: 100vh !important;
+        background-image: url(../images/coming-soon.jpeg);
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    	background: linear-gradient(rgba(255 255 255 / 50%), rgba(255 255 255 / 50%));
+    }
+    main-content, footer-icons, logo {
+    	position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; /* Set the text color */
+        text-align: center;
+    }
+}
 
 #normal-countdown{ text-align: center; }
 
