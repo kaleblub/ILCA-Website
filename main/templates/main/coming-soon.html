@@ -13,10 +13,10 @@
         <div class="top-bar">
             <a class="logo" href="#"><img src="{% static 'img/ILCA-Logo-modified.png' %}" alt="Logo"></a>
             <div class="language-selector dropdown">
-                <button href="#" id="dropdown-btn">
+                <a href="#" id="dropdown-btn">
                     <img class="language-icon" src="{% static 'fonts/icomoon/language-white.svg' %}"></img>
                     <img class="arrow-down" src="{% static 'fonts/icomoon/cheveron-down.svg' %}">
-                </button>
+                </a>
                 <ul class="dropdown-content" id="dropdown-content">
                     {% get_current_language as current_language %}
                     {% get_available_languages as available_languages %}
