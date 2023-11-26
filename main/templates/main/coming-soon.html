@@ -30,6 +30,13 @@
                     {% endfor %}
                 </ul>
             </div>
+            <script type="text/javascript">
+                document.getElementById('dropdown-btn').addEventListener('touchstart', function(event) {
+                    event.preventDefault();
+                    var dropdownContent = document.getElementById('dropdown-content');
+                    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+                });
+            </script>
         </div>
         <div class="display-table">
             <div class="display-table-cell">
