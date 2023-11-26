@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-25 23:00+0000\n"
+"POT-Creation-Date: 2023-11-26 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ILCA_Website/settings.py:138
+#: ILCA_Website/settings.py:132
 msgid "العربية"
-msgstr ""
+msgstr "العربية"
 
-#: ILCA_Website/settings.py:139
+#: ILCA_Website/settings.py:133
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: ILCA_Website/settings.py:140
+#: ILCA_Website/settings.py:134
 msgid "Français"
-msgstr ""
+msgstr "Français"
 
-#: ILCA_Website/settings.py:141
+#: ILCA_Website/settings.py:135
 msgid "Taqbaylit"
-msgstr ""
+msgstr "Taqbaylit"
 
 #: env/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -1251,38 +1251,37 @@ msgid ""
 "International Learning Center of Algeria in Bejaia's Website is Coming Soon."
 msgstr "المركز الدولي للتعليم بالجزائر في موقع بجاية سيتوفر قريبا."
 
-#: main/templates/main/coming-soon.html:32
+#: main/templates/main/coming-soon.html:35
 msgid "ILCA Bejaia's Website is Under Construction"
 msgstr "ILCA موقع بجاية قيد الإنشاء"
 
-#: main/templates/main/coming-soon.html:33
+#: main/templates/main/coming-soon.html:36
 msgid ""
 "Our website is currently in development. We should be ready for launch at "
 "the start of 2024. Thank you for your patience."
 msgstr ""
-"موقعنا قيد التطوير حاليًا. ينبغي أن نكون مستعدين للانطلاق في"
-"بداية عام 2024. أشكركم على صبركم."
+"موقعنا قيد التطوير حاليًا. ينبغي أن نكون مستعدين للانطلاق فيبداية عام 2024. "
+"أشكركم على صبركم."
 
-#: main/templates/main/coming-soon.html:36
+#: main/templates/main/coming-soon.html:39
 msgid "Sign up now to get notified of our launch date!"
 msgstr "سجل الآن لتحصل على إشعار بموعد الإطلاق!"
 
-#: main/templates/main/coming-soon.html:37
+#: main/templates/main/coming-soon.html:40
 msgid "Enter your email"
 msgstr "أدخل بريدك الإلكتروني"
 
-#: main/templates/main/coming-soon.html:38
+#: main/templates/main/coming-soon.html:41
 msgid "Notify me"
-msgstr "أشعرني، أعلمني، بلغني"
+msgstr "بلغني"
 
-#: main/templates/main/coming-soon.html:45
+#: main/templates/main/coming-soon.html:48
 msgid "Connect with us elsewhere : "
 msgstr "تواصل معنا في مكان آخر:"
 
-#: main/templates/main/coming-soon.html:51
+#: main/templates/main/coming-soon.html:54
 msgid ""
 "Hello! I am looking for more information about the International Learning "
 "Center in Bejaia, Algeria."
 msgstr ""
-"مرحبًا! أبحث عن مزيد من المعلومات حول التعلم الدولي "
-"المركز في بجاية، الجزائر."
+"مرحبًا! أبحث عن مزيد من المعلومات حول التعلم الدولي المركز في بجاية، الجزائر."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-25 21:49+0000\n"
+"POT-Creation-Date: 2023-11-26 01:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ILCA_Website/settings.py:132
+msgid "العربية"
+msgstr "العربية"
+
+#: ILCA_Website/settings.py:133
+msgid "English"
+msgstr "English"
+
+#: ILCA_Website/settings.py:134
+msgid "Français"
+msgstr "Français"
+
+#: ILCA_Website/settings.py:135
+msgid "Taqbaylit"
+msgstr "Taqbaylit"
 
 #: env/lib/python3.11/site-packages/django/contrib/messages/apps.py:15
 msgid "Messages"
@@ -1237,36 +1253,36 @@ msgstr ""
 "Le site Web du Centre d'apprentissage international d'Algérie à Bejaia sera "
 "bientôt disponible."
 
-#: main/templates/main/coming-soon.html:30
+#: main/templates/main/coming-soon.html:35
 msgid "ILCA Bejaia's Website is Under Construction"
 msgstr "Le site Internet de l'ILCA Bejaia est en construction"
 
-#: main/templates/main/coming-soon.html:31
+#: main/templates/main/coming-soon.html:36
 msgid ""
 "Our website is currently in development. We should be ready for launch at "
 "the start of 2024. Thank you for your patience."
 msgstr ""
-"Notre site Web est actuellement en développement. Nous devrions être prêts à être lancés à "
-"début 2024. Merci pour votre patience."
+"Notre site Web est actuellement en développement. Nous devrions être prêts à "
+"être lancés à début 2024. Merci pour votre patience."
 
-#: main/templates/main/coming-soon.html:34
+#: main/templates/main/coming-soon.html:39
 msgid "Sign up now to get notified of our launch date!"
 msgstr ""
 "Inscrivez-vous maintenant pour être informé de notre date de lancement !"
 
-#: main/templates/main/coming-soon.html:35
+#: main/templates/main/coming-soon.html:40
 msgid "Enter your email"
 msgstr "Entrer votre Email"
 
-#: main/templates/main/coming-soon.html:36
+#: main/templates/main/coming-soon.html:41
 msgid "Notify me"
 msgstr "Prévenez-moi"
 
-#: main/templates/main/coming-soon.html:43
+#: main/templates/main/coming-soon.html:48
 msgid "Connect with us elsewhere : "
 msgstr "Connectez-vous avec nous ailleurs :"
 
-#: main/templates/main/coming-soon.html:49
+#: main/templates/main/coming-soon.html:54
 msgid ""
 "Hello! I am looking for more information about the International Learning "
 "Center in Bejaia, Algeria."
