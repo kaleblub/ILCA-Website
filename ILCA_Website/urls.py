@@ -29,7 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', registration_views.registration, name='register'),
     path('', main_views.home, name='home'),
-    path('/<str:language>/', main_views.set_language, name="set_language"),
+    path('<str:language>/', main_views.set_language, name="set_language"),
 ]
 
 if settings.DEBUG:
