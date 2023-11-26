@@ -7,8 +7,7 @@
 	1. PRIMARY STYLES
 	2. COMMONS FOR PAGE DESIGN
 		JQUERY LIGHT BOX
-	3. LEFT SECTION
-	4. RIGHT SECTION
+	3. MAIN SECTION
 	
 ====================================================
 
@@ -100,39 +99,153 @@ html {
 
 .font-white{ color: #fff; }
 
-.main-area{ position: relative; height: 100vh; }/*background: #0C0D0F; color: #fff; }*/
+.main-area{ position: relative; height: 100vh; z-index: 2; background-image: url(../images/coming-soon.jpeg); background-size: cover; background-position-y: center;position: relative; z-index: 1;}
+
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(255 255 255 / 64%), rgba(255 255 255 / 64%)); }
+
+@media (max-width: 992px) {
+    .main-section { height: 100% !important; }
+    .main-area {
+        width: 100%;
+        height: 100vh !important;
+    }
+    
+    main-content, footer-icons, logo {
+    	position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; /* Set the text color */
+        text-align: center;
+    }
+}
+
+/* ---------------------------------
+3. MAIN SECTION
+--------------------------------- */
+
+.main-section { width: 100%; position: relative; padding: 0 60px; }
 
 
 /* ---------------------------------
-3. LEFT SECTION
+4.A. Top Bar
 --------------------------------- */
+.main-section .top-bar {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Adjust padding as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Ensure the top bar is above other content */
+}
 
-.left-section{ position: absolute; top: 0; bottom: 0; left: 0; width: 50%; background-size: cover; background-image: url(../images/coming-soon.jpeg); }
+.main-section .top-bar .logo{ position: relative; top: 40px; left: 40px; display: inline-block; vertical-align: middle; }
+
+.dropdown #dropdown-btn {
+  background-color: #0b5f88;
+/*  min-width: 130px;*/
+  width: max-content;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 40px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+.dropdown #dropdown-btn img {
+  margin: 0 5px 0 0;
+}
+.dropdown #dropdown-btn img,
+.dropdown-content li img {
+  width: 18px;
+}
+.dropdown #dropdown-btn,
+.dropdown-content li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+.arrow-down, .language-icon {
+  width: 16px;
+}
+
+.dropdown #dropdown-btn:hover {
+  cursor: pointer;
+  background-color: #497aa7;
+}
+/* Style for the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin: 1px 0 0 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow-y: hidden;
+  max-height: 315px;
+  right: 40px;
+  top: 40px;
+}
+/* Style for the dropdown content items */
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  justify-content: end;
+}
+
+.language-selector .dropdown-content li.active {
+    background-color: #5f5f5f21;
+}
+
+.language-selector .dropdown-content li.active a {
+	    color: #afafaf;
+}
+
+.dropdown-content li img {
+  margin: 0 20px 0px 20px;
+}
+/* Style for the dropdown content items on hover */
+.dropdown-content li a { color: #136185; }
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  color: #136185;
+}
+/* Show the dropdown content when the dropdown button is clicked */
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
 
 
-#normal-countdown{ text-align: center; }
-
-#normal-countdown .time-sec{ position: relative; display: inline-block; margin: 2.5%; height: 120px; width: 120px; 
-	border-radius: 100px; background: #fff; box-shadow: 0px 0px 0px 5px rgba(255,255,255,.4); color: #F84982; }
-
-#normal-countdown .time-sec .main-time{ font-weight: 500; line-height: 100px; }
-
-#normal-countdown .time-sec span{ position: absolute; bottom: 25px; left: 50%; transform: translateX(-50%); }
+.main-section .top-bar .language-selector {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 20px;
+}
+.main-section .top-bar .logo img{ height: 10rem; width: auto; } 
 
 
 
-/* ---------------------------------
-4. RIGHT SECTION
---------------------------------- */
 
-.right-section{ float: right; width: 50%; position: relative; padding: 0 60px; }
-
-.right-section .logo{ position: absolute; top: 40px; height: 30px; }
-
-.right-section .logo img{ height: 10rem; width: auto; } 
-
-
-.right-section .main-content{ padding: 40px 40px 40px 0; }
+.main-section .main-content{ padding: 40px 40px 40px 0; }
 
 .main-content .title{ margin-bottom: 15px; }
 
@@ -153,26 +266,26 @@ html {
 
 
 .main-content .email-input-area .submit-btn{ width: 120px; text-align: center; position: absolute; top: 0; bottom: 0; 
-	right: 0; font-size: .9em; outline: 0; border-radius: 0 2px 2px 0; transition: all .3s; background: #F84982; color: #fff; }
+	right: 0; font-size: .9em; outline: 0; border-radius: 0 2px 2px 0; transition: all .3s; background: #0b5f88; color: #fff; }
 
-.main-content .email-input-area .submit-btn:hover{ background: #e40b52; }
+.main-content .email-input-area .submit-btn:hover{ background: #497aa7; }
 
-.right-section .footer-icons{ position: absolute; bottom: 30px;}
+.main-section .footer-icons{ position: absolute; bottom: 30px;}
 
-.right-section .footer-icons > li > a{ display: inline-block; font-size: 1.07em; padding: 0 0px; }
+.main-section .footer-icons > li > a{ display: inline-block; font-size: 1.07em; padding: 0 0px; }
 
-.right-section .footer-icons > li:first-child{ margin-right: 10px; }
+.main-section .footer-icons > li:first-child{ margin-right: 10px; }
 
-.right-section .footer-icons > li > a > i{ display: inline-block; height: 35px; line-height: 33px; 
+.main-section .footer-icons > li > a > i{ display: inline-block; height: 35px; line-height: 33px; 
 	transition: all .2s; border-radius: 40px; text-align: center; width: 35px; }
 
-.right-section .footer-icons > li > a:hover > i{ border: 1px solid; }
+.main-section .footer-icons > li > a:hover > i{ border: 1px solid; }
 
-.right-section .footer-icons > li > a > i[class*="facebook"]{ color: #2A61D6; border-color: #2A61D6; }
-.right-section .footer-icons > li > a > i[class*="twitter"]{ color: #3AA4F8; border-color: #3AA4F8; }
-.right-section .footer-icons > li > a > i[class*="google"]{ color: #F43846; border-color: #F43846; }
-.right-section .footer-icons > li > a > i[class*="instagram"]{ color: #8F614A; border-color: #8F614A; }
-.right-section .footer-icons > li > a > i[class*="pinterest"]{ color: #E1C013; border-color: #E1C013; }
+.main-section .footer-icons > li > a > i[class*="facebook"]{ color: #2A61D6; border-color: #2A61D6; }
+.main-section .footer-icons > li > a > i[class*="twitter"]{ color: #3AA4F8; border-color: #3AA4F8; }
+.main-section .footer-icons > li > a > i[class*="google"]{ color: #F43846; border-color: #F43846; }
+.main-section .footer-icons > li > a > i[class*="instagram"]{ color: #8F614A; border-color: #8F614A; }
+.main-section .footer-icons > li > a > i[class*="pinterest"]{ color: #E1C013; border-color: #E1C013; }
 
 .float{
 	position:fixed;
@@ -191,4 +304,20 @@ html {
 
 .my-float{
 	margin-top:16px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px !important;
+    }
+    h1 { font-size: 28px !important; }
+    .logo img { height: 6rem; }
+    .main-section { padding: 0 20px; }
+}
+
+@media screen and (max-height: 660px) {
+	.main-section .top-bar { padding: 0; top: -25px; }
+	.main-section .top-bar .logo img { height: 4rem; }
+	.main-section .main-content { padding: 0 0 0 0; }
+	.main-content .title { margin-bottom: 0; font-size: 2.0rem;}
 }

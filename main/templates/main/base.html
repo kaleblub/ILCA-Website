@@ -1,25 +1,25 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
 
 <head>
     <meta charset="UTF-8">
-    <title>ILCA - International Learning Center in Algeria</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="International Learning Center of Algeria.">
-    <meta name="keywords" content="Learning, languages, Algeria, Bejaia, Center, International">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock keywords %}">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <!-- COMING SOON SECTION -->
-        <!-- Font -->
-    
+    <!-- COMING SOON SECTION -->    
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
-    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
     <link href="{% static 'css/coming-soon-ionicons.css' %}" rel="stylesheet">
     
-    
-    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+    <!-- <link rel="stylesheet" href="common-css/jquery.classycountdown.css" /> -->
         
     <link href="{% static 'css/coming-soon-styles.css' %}" rel="stylesheet">
     
@@ -27,37 +27,21 @@
     <!-- COMING SOON END -->
 
     <!-- Favicon -->
-    <link rel="stylesheet" type="text/css" href="{% static 'img/ILCA-Logo.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/ILCA-Logo-modified.ico' %}">
 
-    <!-- Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-    
-     --><!-- Vendor CSS Files -->
+    <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-<!--     <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet"> -->
-
-    <!-- Main CSS File -->
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> -->
 </head>
 
 <body>
-    {% block content %}{% endblock content %}
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/jquery.fancybox.min.js' %}"></script>
-    <script src="{% static 'lib/jquery.sticky.js' %}"></script>
 
-    <!-- Main JavaScript File -->
-    <script src="{% static 'js/main.js' %}"></script>
+    {% block content %}{% endblock content %}
+    
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'js/coming-soon-jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/coming-soon-jquery.countdown.min.js' %}"></script>    
+    <script src="{% static 'js/coming-soon-scripts.js' %}"></script>
 </body>
 
 </html>
