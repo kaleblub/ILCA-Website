@@ -13,9 +13,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
-from decouple import config
+from dotenv import load_dotenv
+from django.utils.translation import gettext_lazy as _
 
-PRISMA_URL = config('PRISMA_URL', default='')
+load_dotenv()
+
+PRISMA_URL = os.getenv('PRISMA_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,15 +28,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%9i*0c(ygq-k5ux#l7n8_z2ip@af5f=)@$v1qrz2g2)g^i$lab'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+    SECURE_SSL_REDIRECT = False
 else:
-    ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+    ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'ilcabejaia.com', 'www.ilcabejaia.com']
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 # Application definition
 
@@ -47,12 +55,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'django.contrib.humanize', # new
+    'django.contrib.sites', # new
+    'django.contrib.flatpages', # new
+    'django.contrib.redirects', # new
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware', # new
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -113,7 +126,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('ar', _('العربية')),
+    ('en', _('English')),
+    ('fr', _('Français')),
+    ('kab', _('Taqbaylit')),
+]
 
 TIME_ZONE = 'UTC'
 
@@ -122,10 +142,16 @@ USE_I18N = True
 USE_TZ = True
 
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
+USE_L10N = True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = '/vercel/path0/static/' #'/static/'
+STATIC_URL = '/static/' #'/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 

@@ -2,8 +2,8 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}ILCA - {% trans 'International Learning Center of Algeria in Bejaia Coming Soon' %}{% endblock title %}
-{% block description %}{% trans "International Learning Center of Algeria in Bejaia's Website is Coming Soon." %}{% endblock description %}
+{% block title %}ILCA - {% translate 'International Learning Center of Algeria in Bejaia Coming Soon' %}{% endblock title %}
+{% block description %}{% translate "International Learning Center of Algeria in Bejaia's Website is Coming Soon." %}{% endblock description %}
 {% block keywords %}Learning, languages, Algeria, Bejaia, Center, International{% endblock keywords %}
 
 {% block content %}
@@ -15,38 +15,41 @@
         <div class="top-bar">
             <a class="logo" href="#"><img src="{% static 'img/ILCA-Logo-modified.png' %}" alt="Logo"></a>
             <div class="language-selector dropdown">
-                <button href="#" id="dropdown-btn"><img class="language-icon" src="{% static 'fonts/icomoon/language-white.svg' %}"></img><img class="arrow-down" src="{% static 'fonts/icomoon/cheveron-down.svg' %}"></button>
+                <button href="#" id="dropdown-btn">
+                    <img class="language-icon" src="{% static 'fonts/icomoon/language-white.svg' %}"></img>
+                    <img class="arrow-down" src="{% static 'fonts/icomoon/cheveron-down.svg' %}">
+                </button>
                 <ul class="dropdown-content" id="dropdown-content">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">Français</a></li>
-                    <li><a href="#">العربية</a></li>
-                    <li><a href="#">Taqbaylit</a></li>
+                    <li><a href="{% url 'set_language' 'en' %}">English</a></li>
+                    <li><a href="{% url 'set_language' 'fr' %}">Français</a></li>
+                    <li><a href="{% url 'set_language' 'ar' %}">العربية</a></li>
+                    <li><a href="{% url 'set_language' 'kab' %}">Taqbaylit</a></li>
                 </ul>
             </div>
         </div>
         <div class="display-table">
             <div class="display-table-cell">
                 <div class="main-content">
-                    <h1 class="title"><b>{% trans "ILCA Bejaia's Website is Under Construction" %}</b></h1>
-                    <p class="subtitle">{% trans 'Our website is currently in development. We should be ready for launch at the start of 2024. Thank you for your patience.' %}</p>
+                    <h1 class="title"><b>{% translate "ILCA Bejaia's Website is Under Construction" %}</b></h1>
+                    <p class="subtitle">{% translate 'Our website is currently in development. We should be ready for launch at the start of 2024. Thank you for your patience.' %}</p>
                     <div class="email-input-area">
                         <form method="post">
-                            <label for="text" class="form-label"><i>{% trans "Sign up now to get notified of our launch date!" %}</i></label><br>
-                            <input class="email-input" name="email" type="text" placeholder="{% trans 'Enter your email' %}" />
-                            <button class="submit-btn" name="submit" type="submit"><b>{% trans "Notify me" %}</b></button>
+                            <label for="text" class="form-label"><i>{% translate "Sign up now to get notified of our launch date!" %}</i></label><br>
+                            <input class="email-input" name="email" type="text" placeholder="{% translate 'Enter your email' %}" />
+                            <button class="submit-btn" name="submit" type="submit"><b>{% translate "Notify me" %}</b></button>
                         </form>
                     </div><!-- email-input-area -->
                 </div><!-- main-content -->
             </div><!-- display-table-cell -->
         </div><!-- display-table -->
         <ul class="footer-icons">
-            <li>{% trans "Connect with us elsewhere : " %}</li>
+            <li>{% translate "Connect with us elsewhere : " %}</li>
             <li><a href="https://facebook.com/ilca.bejaia" target="_blank"><i class="ion-social-facebook"></i></a></li>
             <!-- <li><a href="https://wa.me/+213560680908"><i class="ion-social-whatsapp"></i></a></li> -->
             <li><a href="https://www.instagram.com/ilca.bejaia" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
         </ul>
     </section><!-- right-section -->
-    <a href="https://api.whatsapp.com/send?phone=+213560680908&text={% trans 'Hello! I am looking for more information about the International Learning Center in Bejaia, Algeria.' %}" class="float" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=+213560680908&text={% translate 'Hello! I am looking for more information about the International Learning Center in Bejaia, Algeria.' %}" class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
 </div><!-- main-area -->
