@@ -1259,7 +1259,7 @@ msgid ""
 "Our website is currently in development. We should be ready for launch at "
 "the start of 2024. Thank you for your patience."
 msgstr ""
-"blah blah blah, eneminie"
+""
 
 #: main/templates/main/coming-soon.html:36
 msgid "Sign up now to get notified of our launch date!"
@@ -1279,4 +1279,4 @@ msgstr ""
 
 #: main/templates/main/coming-soon.html:51
 msgid "Hello! I am looking for more information about the International Learning Center in Bejaia, Algeria."
-msgstr "Azul, ce va?"
+msgstr ""
