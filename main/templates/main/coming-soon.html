@@ -9,9 +9,7 @@
 {% block content %}
 <div class="main-area">
     <div class="overlay"></div> <!-- Overlay for smaller screensizes when the background is put behind the whole page -->
-    <section class="left-section">
-    </section><!-- left-section -->
-    <section class="right-section full-height">
+    <section class="main-section full-height">
         <div class="top-bar">
             <a class="logo" href="#"><img src="{% static 'img/ILCA-Logo-modified.png' %}" alt="Logo"></a>
             <div class="language-selector dropdown">
@@ -48,7 +46,7 @@
             <!-- <li><a href="https://wa.me/+213560680908"><i class="ion-social-whatsapp"></i></a></li> -->
             <li><a href="https://www.instagram.com/ilca.bejaia" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
         </ul>
-    </section><!-- right-section -->
+    </section><!-- main-section -->
     <a href="https://api.whatsapp.com/send?phone=+213560680908&text={% translate 'Hello! I am looking for more information about the International Learning Center in Bejaia, Algeria.' %}" class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
     </a>
