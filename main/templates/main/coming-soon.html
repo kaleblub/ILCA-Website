@@ -18,10 +18,16 @@
                     <img class="arrow-down" src="{% static 'fonts/icomoon/cheveron-down.svg' %}">
                 </button>
                 <ul class="dropdown-content" id="dropdown-content">
-                    <li><a href="{% url 'set_language' 'en' %}">English</a></li>
-                    <li><a href="{% url 'set_language' 'fr' %}">Français</a></li>
-                    <li><a href="{% url 'set_language' 'ar' %}">العربية</a></li>
-                    <li><a href="{% url 'set_language' 'kab' %}">Taqbaylit</a></li>
+                    {% get_current_language as current_language %}
+                    {% get_available_languages as available_languages %}
+                    
+                    {% for lang_code, lang_name in available_languages %}
+                        <li {% if current_language == lang_code %}class="active"{% endif %}>
+                            <a href="{% url 'set_language' language=lang_code %}" style="display: block; width: 100%; height: 100%;">
+                                {{ lang_name }}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
