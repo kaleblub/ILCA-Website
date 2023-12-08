@@ -8,7 +8,7 @@ def home(request):
 
 	activate(language)
 
-	return render(request, 'main/coming-soon.html')
+	return render(request, 'main/home.html')
 
 def set_language(request, language):
 	print(f"Language selected: {language}")
