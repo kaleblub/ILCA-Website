@@ -204,7 +204,7 @@ EMAIL_HOST_PASSWORD = os.getenv("USER_PASSWORD")
 # Crispy Config
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-LOGIN_REDIRECT_URL = "/dashboard/"
+LOGIN_REDIRECT_URL = "/app/dashboard/"
 LOGOUT_REDIRECT_URL = "/"
 
 # DRF setup

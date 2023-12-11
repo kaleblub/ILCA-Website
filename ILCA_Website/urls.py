@@ -12,6 +12,14 @@ from about import views as about_views
 from contact import views as contact_views
 
 urlpatterns = [
+    # Front End URLs
+    # path('admin/', admin.site.urls),
+    path('register/', registration_views.registration, name='register'),
+    path('', main_views.home, name='home'),
+    path('about/', about_views.about, name='about'),
+    path('contact/', contact_views.contact, name='contact'),
+    path('<str:language>/', main_views.set_language, name="set_language"),
+    
     # LMS URLs
     path('app/', include('app.urls')),
     path('accounts/', include('accounts.urls')),
@@ -23,14 +31,6 @@ urlpatterns = [
     path('payments/', include('payments.urls')),
 
     path('accounts/api/', include('accounts.api.urls', namespace='accounts-api')),
-
-    # Front End URLs
-    # path('admin/', admin.site.urls),
-    # path('register/', registration_views.registration, name='register'),
-    path('', main_views.home, name='home'),
-    path('about/', about_views.about, name='about'),
-    path('contact/', contact_views.contact, name='contact'),
-    path('<str:language>/', main_views.set_language, name="set_language"),
 ]
 
 if settings.DEBUG:

@@ -13,7 +13,6 @@ from .views import (
     )
 from .forms import EmailValidationOnForgotPassword
 
-
 urlpatterns = [
     path('', include('django.contrib.auth.urls')),
 
