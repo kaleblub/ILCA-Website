@@ -31,7 +31,7 @@ body {
 
 .back-to-top {
     position: fixed;
-    display: none;
+    display: flex!important;
     right: 45px;
     bottom: 45px;
     z-index: 99;
@@ -890,8 +890,8 @@ a {
 
 
 
-.hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/static/img/carousel-1.jpg");
+.main-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/static/images/coming-soon.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

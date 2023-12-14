@@ -1852,7 +1852,7 @@ a {
 #login .text-left {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px 0 15px;
+  padding: 0 18px 0 18px;
 }
 
 #login .text-left > * {

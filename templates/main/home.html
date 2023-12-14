@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 <!-- Hero Start -->
-<div class="container-fluid p-0 mb-5 position-relative hero-image">
-    <img class="img-fluid" src="{% static 'images/coming-soon.jpeg' %}" alt="">
+<div class="container-fluid p-0 mb-5 position-relative main-image">
+    <!-- <img class="img-fluid fit-image" src="{% static 'images/coming-soon.jpeg' %}" alt=""> -->
     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center hero-text">
         <div class="container">
             <div class="row justify-content-start">
@@ -11,8 +11,8 @@
                     <h5 class="text-primary text-uppercase mb-3 animated slideInDown">International Learning Center Algeria, in Bejaia</h5>
                     <h1 class="display-3 text-white animated slideInDown">Unlock Your Language Potential with the International Learning Center</h1>
                     <p class="fs-5 text-white mb-4 pb-2">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Provident modi ullam, repellat commodi. Amet sunt accusantium ratione quo perspiciatis officia officiis, magnam debitis tempore quasi necessitatibus cupiditate, unde distinctio, iusto!</p>
-                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Learn More</a>
-                    <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Register Now</a>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Learn More</a>
+                    <a href="{% url 'register' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Register Now</a>
                 </div>
             </div>
         </div>
