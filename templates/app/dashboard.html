@@ -329,6 +329,16 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+
+	var green = '#4E852B';
+	var red = '#C5001C';
+	var blue = '#0B5F88';
+
+	var red_alert = '#FF0000';
+	var orange_warning = '#FFA500';
+	var yellow_warning = '#FFFF00';
+	var green_good = '#00FF00';
+
 	$(document).ready(function () {
 
 		// Setup
@@ -344,26 +354,26 @@
 			labels: labels,
 			datasets: [{
 				label: 'Students',
-				backgroundColor: 'rgba(86, 224, 224, 0.5)',
-				borderColor: 'rgb(86, 224, 224)',
+				backgroundColor: green + '80',
+				borderColor: green,
 				hoverBorderWidth: 3,
 				data: [0, 10, 5, 2, 20, 30, 45]
 			}, {
 				label: 'Teachers',
-				backgroundColor: 'rgba(253, 174, 28, 0.5)',
-				borderColor: 'rgb(253, 174, 28)',
+				backgroundColor: blue + '80',
+				borderColor: blue,
 				hoverBorderWidth: 3,
 				data: [20, 0, 15, 4, 6, 4, 60],
 			}, {
 				label: 'Admins',
-				backgroundColor: 'rgba(203, 31, 255, 0.5)',
-				borderColor: 'rgb(203, 31, 255)',
+				backgroundColor: red + '80',
+				borderColor: red,
 				hoverBorderWidth: 3,
 				data: [85, 30, 34, 20, 20, 55, 45],
-			}, {
-				label: 'Stuffs',
-				backgroundColor: 'rgba(255, 19, 157, 0.5)',
-				borderColor: 'rgb(255, 19, 157)',
+			 }, {
+				label: 'Others',
+				backgroundColor: yellow_warning + '80',
+				borderColor: yellow_warning,
 				hoverBorderWidth: 3,
 				data: [45, 75, 70, 80, 20, 30, 90],
 			}]
@@ -470,26 +480,26 @@
 			labels: labelsGrade,
 			datasets: [{
 				label: 1,
-				backgroundColor: 'rgba(86, 224, 224, 0.5)',
-				borderColor: 'rgb(86, 224, 224)',
+				backgroundColor: red_alert + '80',
+				borderColor: red_alert,
 				hoverBorderWidth: 3,
 				data: [0, 10, 5, 2, 20, 30, 45]
 			}, {
 				label: 2,
-				backgroundColor: 'rgba(253, 174, 28, 0.5)',
-				borderColor: 'rgb(253, 174, 28)',
+				backgroundColor: orange_warning + '80',
+				borderColor: orange_warning,
 				hoverBorderWidth: 3,
 				data: [20, 0, 15, 4, 6, 4, 60],
 			}, {
 				label: 3,
-				backgroundColor: 'rgba(203, 31, 255, 0.5)',
-				borderColor: 'rgb(203, 31, 255)',
+				backgroundColor: yellow_warning + '80',
+				borderColor: yellow_warning,
 				hoverBorderWidth: 3,
 				data: [85, 30, 34, 20, 20, 55, 45],
 			}, {
 				label: 4,
-				backgroundColor: 'rgba(255, 19, 157, 0.5)',
-				borderColor: 'rgb(255, 19, 157)',
+				backgroundColor: green_good + '80',
+				borderColor: green_good,
 				hoverBorderWidth: 3,
 				data: [45, 75, 70, 80, 20, 30, 90],
 			}]
