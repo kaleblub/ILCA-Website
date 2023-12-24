@@ -66,7 +66,7 @@ DJANGO_APPS = [
 # Third party apps
 THIRD_PARTY_APPS = [
     "crispy_forms",
-    "rest_framework",
+    # "rest_framework",
 ]
 
 # Custom apps
@@ -78,12 +78,12 @@ PROJECT_APPS = [
     # 'registration.apps.RegistrationConfig',
 
     # LMS Apps
-    "app.apps.AppConfig",
-    "accounts.apps.AccountsConfig",
-    "course.apps.CourseConfig",
-    "result.apps.ResultConfig",
-    "search.apps.SearchConfig",
-    "quiz.apps.QuizConfig",
+    # "app.apps.AppConfig",
+    # "accounts.apps.AccountsConfig",
+    # "course.apps.CourseConfig",
+    # "result.apps.ResultConfig",
+    # "search.apps.SearchConfig",
+    # "quiz.apps.QuizConfig",
     # "payments.apps.PaymentsConfig",
 ]
 
