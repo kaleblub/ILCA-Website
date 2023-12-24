@@ -39,10 +39,10 @@ if DEBUG:
     SECURE_SSL_REDIRECT = False
 else:
     ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app', 'ilcabejaia.com', 'www.ilcabejaia.com']
-    SECURE_SSL_REDIRECT = True
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    # SECURE_SSL_REDIRECT = True
+    # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # SESSION_COOKIE_SECURE = True
+    # CSRF_COOKIE_SECURE = True
 
 # Change the default User Models to our Custom Model
 AUTH_USER_MODEL = "accounts.User"
