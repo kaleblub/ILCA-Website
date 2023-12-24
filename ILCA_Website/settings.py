@@ -45,7 +45,7 @@ else:
     CSRF_COOKIE_SECURE = True
 
 # Change the default User Models to our Custom Model
-AUTH_USER_MODEL = "accounts.User"
+# AUTH_USER_MODEL = "accounts.User"
 
 # Application definition
 
