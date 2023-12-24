@@ -21,16 +21,16 @@ urlpatterns = [
     path('<str:language>/', main_views.set_language, name="set_language"),
     
     # LMS URLs
-    path('app/', include('app.urls')),
-    path('accounts/', include('accounts.urls')),
-    path('programs/', include('course.urls')),
-    path('result/', include('result.urls')),
-    path('search/', include('search.urls')),
-    path('quiz/', include('quiz.urls')),
+    # path('app/', include('app.urls')),
+    # path('accounts/', include('accounts.urls')),
+    # path('programs/', include('course.urls')),
+    # path('result/', include('result.urls')),
+    # path('search/', include('search.urls')),
+    # path('quiz/', include('quiz.urls')),
 
     # path('payments/', include('payments.urls')),
 
-    path('accounts/api/', include('accounts.api.urls', namespace='accounts-api')),
+    # path('accounts/api/', include('accounts.api.urls', namespace='accounts-api')),
 ]
 
 if settings.DEBUG:
