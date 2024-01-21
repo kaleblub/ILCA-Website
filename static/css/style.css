@@ -888,6 +888,9 @@ a {
   Hero Section
 -----------------------*/
 
+.main-hero-summary {
+    font-size: larger;
+}
 
 
 .main-image {
