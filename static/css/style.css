@@ -967,6 +967,10 @@ a {
     left: 0;
 }
 
+i.fa.fa-dot-circle {
+    padding-right: 5px;
+}
+
 /*---------------------
   Services
 -----------------------*/
@@ -1048,6 +1052,10 @@ a {
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
+    }
+
+    img.footer-logo-image.img-fluid {
+        width: 25% !important;
     }
 }
 
