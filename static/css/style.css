@@ -9,6 +9,7 @@
     --lightened-accent-background: rgba(48 80 79 / 50%);
 
     --standard-border-radius: 0.2rem;
+    /* add images as variables for the header pictures? */
 }
 
 html, body {
@@ -78,6 +79,10 @@ a {
     background-color: var(--lightened-accent-background)!important;
 }
 
+.bg-dark {
+    background-color: var(--dark-accent-background)!important;
+    color: white;
+}
 /*---------------------
   Buttons
 -----------------------*/
@@ -932,7 +937,7 @@ a {
 }
 
 .page-header {
-    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgb(48 80 79 / 80%), rgb(48 80 79 / 50%)), url(../img/carousel-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -999,7 +1004,6 @@ i.fa.fa-dot-circle {
   Services
 -----------------------*/
 .service-item {
-    background: var(--lightened-accent-background);
     transition: .5s;
 }
 
