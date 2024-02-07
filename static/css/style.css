@@ -1026,6 +1026,17 @@ i.fa.fa-dot-circle {
     color: var(--light) !important;
 }
 
+.service-item .p-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-section,
+.icon-section {
+    margin-bottom: 10px; /* Adjust spacing between image, icon, and text as needed */
+}
+
 /*---------------------
   Categories & Courses
 -----------------------*/
@@ -1138,6 +1149,7 @@ i.fa.fa-dot-circle {
    background-color: var(--dark-accent-background);
    color: var(--light);
    padding-top: 25px;
+   margin-top: 48px;
 }
 
 .footer .btn.btn-social {
@@ -1207,4 +1219,15 @@ i.fa.fa-dot-circle {
 
 .footer-logo-image {
     height: 6rem;
+}
+
+/*---------------------
+  Contact Page
+-----------------------*/
+
+.contact-form {
+    background: var(--lightened-accent-background);
+    padding: 50px;
+    border-radius: var(--standard-border-radius);
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.1);
 }
