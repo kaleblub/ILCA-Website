@@ -1,7 +1,7 @@
 {% extends "main/base.html" %}
 {% load static %}
 {% block content %}
-<div class="container-fluid bg-primary py-5 mb-5 page-header">
+<div class="container-fluid bg-primary py-5 mb-5 page-header page-header-contact-image">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
@@ -18,7 +18,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 pos-rel left-1 top-7">
             <img src="{% static 'img/course-2.jpg' %}" alt="Contact" class="img-fluid">
             <div class="row">
                 <div class="col-12">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="col-md-6 bg-dark contact-form">
-            <h2 class="text-primary">Send us a message</h2>
+            <h2 class="text-primary marbot-3">Send us a message</h2>
             <form action="{% url 'contact' %}" method="post">
                 {% csrf_token %}
                 <div class="form-group">
