@@ -138,13 +138,19 @@ a {
 
 .btn-square,
 .btn-sm-square,
-.btn-lg-square {
+.btn-lg-square,
+.btn-lg-circle {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: normal;
     border-radius: 0px;
+}
+
+.btn-lg-circle {
+    padding: 35px;
+    border-radius: 50px;
 }
 
 /*---------------------

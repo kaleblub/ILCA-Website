@@ -87,14 +87,25 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-4">
-            {% for coursetype, coursedescription in courses_and_info.items %}
-                <div class="col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-dark text-center">
-                        <div class="">
-                            <img src="{% static 'img/beginner-courses.jpg' %}" alt="" class="img-fluid mb-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">{{ coursetype }}</h5>
-                            <p>{{ coursedescription }}</p>
+            {% for course in courses %}
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="padding-top: 20px;">
+                    <div class="team-item text-center" style="box-shadow: 5px 5px 20px 0px grey; min-height: 434.33px;">
+                        <div class="overflow-hidden">
+                            <div class="position-relative d-flex flex-column justify-content-center" style="margin-top: -45px;">
+                                <div class="d-flex justify-content-center pt-3">
+                                    <img src="{% static course.0 %}" alt="" class="img-fluid">
+                                </div>
+                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                    <div class="d-flex justify-content-center pt-2 px-1">
+                                        <a class="btn btn-sm-square btn-primary btn-lg-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <div class="text-left p-4">
+                                    <h5 class="mb-0">{{ course.1 }}</h5>
+                                    <br>
+                                    <p>{{ course.2 }}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
