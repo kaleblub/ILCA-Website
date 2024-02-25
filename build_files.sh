@@ -11,6 +11,7 @@ echo "--Upgrading pip and installing psycopg2-binary--"
 pip install psycopg2-binary
 
 echo "--Collecting Static Files--"
+mkdir staticfiles
 python3 manage.py collectstatic --noinput
 
 # Set PYTHONPATH to the project root directory
