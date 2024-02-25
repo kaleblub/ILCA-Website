@@ -88,22 +88,22 @@
     <div class="container">
         <div class="row g-4">
             {% for course in courses %}
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="padding-top: 20px;">
-                    <div class="team-item text-center" style="box-shadow: 5px 5px 20px 0px grey; min-height: 434.33px;">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s" style="padding-top: 40px;">
+                    <div class="team-item text-center" style="box-shadow: 5px 5px 20px 0px grey;  min-height: 434.33px; background-color: #c8d5d9;">
                         <div class="overflow-hidden">
-                            <div class="position-relative d-flex flex-column justify-content-center" style="margin-top: -45px;">
-                                <div class="d-flex justify-content-center pt-3">
-                                    <img src="{% static course.0 %}" alt="" class="img-fluid">
+                            <div class="position-relative d-flex flex-column justify-content-center" style="margin-top: 0px;">
+                                <div class="d-flex justify-content-center">
+                                    <img src="{% static course.0 %}" alt="" class="img-fluid overlay-before">
                                 </div>
-                                <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                                <div class="position-relative d-flex justify-content-center" style="margin-top: -45px;">
                                     <div class="d-flex justify-content-center pt-2 px-1">
-                                        <a class="btn btn-sm-square btn-primary btn-lg-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-sm-square btn-primary btn-lg-circle mx-1" href=""><i class="{{ course.1 }}"></i></a>
                                     </div>
                                 </div>
                                 <div class="text-left p-4">
-                                    <h5 class="mb-0">{{ course.1 }}</h5>
+                                    <h5 class="mb-0">{{ course.2 }}</h5>
                                     <br>
-                                    <p>{{ course.2 }}</p>
+                                    <p>{{ course.3 }}</p>
                                 </div>
                             </div>
                         </div>
