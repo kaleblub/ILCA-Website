@@ -1,11 +1,9 @@
-channels==4.0.0
-dj_database_url==2.1.0
-Django==4.0.8
-django_model_utils==4.3.1
-gopay==2.0.2
-Pillow==10.1.0
-python-dotenv==1.0.0
-reportlab==4.0.4
-stripe==5.5.0
-whitenoise==6.6.0
-django-crispy-forms==2.0
+dj_database_url==2.1.0 # Needed
+Django==4.0.8 # Needed
+django_model_utils==4.3.1 # Needed
+Pillow==10.1.0 # Needed
+python-dotenv==1.0.0 # Needed
+reportlab==4.0.4 # Needed
+whitenoise==6.6.0 # Needed
+django-crispy-forms==2.0 # Needed
+psycopg2-binary==2.9.9 # Needed
