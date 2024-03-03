@@ -776,6 +776,12 @@ a {
     color: var(--primary-clr) !important;
 }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .site-menu {
+        right: 115px;
+    }
+}  
+
 /* Burger */
 .burger {
     width: 28px;
@@ -961,7 +967,13 @@ a {
 
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem!important;
+    }
 
+    .wow {
+        padding: 25px 70px 0 70px;
+    }
 }
 
 .page-header {
