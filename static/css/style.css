@@ -50,6 +50,11 @@ a {
     color: var(--primary-clr);
 }
 
+a:hover {
+    color: var(--light);
+    text-decoration: none;
+}
+
 .text-primary {
     color: var(--primary-clr)!important;
 }
@@ -157,7 +162,11 @@ a {
   Navbar
 -----------------------*/
 .top-bar a {
-    color: #ffffff;
+    color: var(--light);
+}
+
+.d-none:hover {
+    color: var(--primary-clr)!important;
 }
 
 .logo {
@@ -170,6 +179,14 @@ a {
 @media (max-width: 991.98px) {
     .logo {
         left: 20px;
+    }
+
+    .site-nav {
+        padding-top: 0!important;
+        top: -32px!important;
+    }
+    .btn-book {
+        margin-top: 37px!important;
     }
 }
 
@@ -184,7 +201,7 @@ a {
 .btn-book {
     position: absolute;
     right: 15px;
-    margin-top: -2px;
+    margin-top: -22px;
 }
 
 @media (max-width: 991.98px) {
@@ -220,6 +237,7 @@ a {
     margin-bottom: 0;
     position: absolute;
     top: -10px;
+    right: 0;
 }
 
 .site-nav .site-navigation .site-menu>li {
