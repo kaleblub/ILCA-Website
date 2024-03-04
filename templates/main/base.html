@@ -39,7 +39,8 @@
 
 <body>
 <!-- Header Begin -->
-        <div class="site-mobile-menu">
+<header>    
+    <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close">
                 <span class="icofont-close js-menu-toggle"></span>
@@ -52,21 +53,12 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-6 col-lg-9">
-                        <a href="#" class="medium mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have a question?</span></a>
-                        <a href="#" class="medium mr-3" id="copyPhone"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block phone-link">+213 5 6068 0908</span></a>
-                        <a href="#" class="medium mr-3" id="copyEmail"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block email-link">ilca.bejaia@gmail.com</span></a>
+                        <a href="#" class="mr-3"><span class="icon-question-circle-o mr-2"></span> <span class="d-none d-lg-inline-block">Have a question?</span></a>
+                        <a href="#" class="mr-3" id="copyPhone"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block phone-link">+213 5 6068 0908</span></a>
+                        <a href="#" class="mr-3" id="copyEmail"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block email-link">ilca.bejaia@gmail.com</span></a>
                     </div>
                     <div class="col-6 col-lg-3 text-right">
                         <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Login/Register</a>
-<!-- 
-                        <a href="#" class="url-login medium mr-3">
-                            <span class="icon-lock"></span>
-                            Log In
-                        </a>
-                        <a href="#" class="url-register medium">
-                            <span class="icon-person"></span>
-                            Register
-                        </a> -->
                     </div>
                 </div>
             </div>
@@ -86,11 +78,9 @@
                                 <li><a href="#">English</a></li></li>
                                 <li><a href="#">French</a></li></li>
                                 <li><a href="#">Kabyle</a></li></li>
-
                             </ul>
                         </li>
                     </ul>
-                    <!-- <a href="#" class="btn-book btn btn-secondary btn-sm menu-absolute">Enroll Now</a> -->
                     <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
                         <span></span>
                     </a>
@@ -98,44 +88,37 @@
             </div>
         </div>
     </nav>
-        <!-- <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>ILCA</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
-                <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Language</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="#" class="dropdown-item">Arabic</a>
-                        <a href="#" class="dropdown-item">English</a>
-                        <a href="#" class="dropdown-item">French</a>
-                        <a href="#" class="dropdown-item">Kabyle</a>
-                    </div>
-                </div>
-            <a href="{% url 'register' %}" class="btn btn-primary py-4 px-lg-5">Login/Register<i class="fa fa-arrow-right ms-3"></i></a>
-            </div>
-        </div>
-    </nav> -->
-    <!-- </header> -->
+</header>
     <!-- Header End -->
+
     <!-- Content Begin -->
+<main>
     {% block content %}{% endblock content %}
+</main>
     <!-- Content End -->
+    
     <!-- Footer Begin -->
+<footer>
     {% include 'main/footer.html' %}
+</footer>
     <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <!-- JavaScript Libraries -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- WOW.js (if used) -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <!-- Owl Carousel (if used) -->
+    <link rel="stylesheet" href="{% static 'js/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'js/owl.theme.default.min.css' %}">
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
