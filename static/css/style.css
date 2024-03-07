@@ -25,6 +25,14 @@ body {
 /*    min-height: 100vh;*/
 }
 
+main {
+    display: inline;
+}
+
+footer {
+    position: relative;
+}
+
 
 .fw-medium {
     font-weight: 600 !important;
@@ -889,7 +897,7 @@ a:hover {
 .top-bar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-/*.navbar .dropdown-toggle::after {
+/* .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
     font-family: "Font Awesome 5 Free";
@@ -963,7 +971,7 @@ a:hover {
         transition: .5s;
         opacity: 1;
     }
-}*/
+} */
 
 /*---------------------
   Hero Section
@@ -975,7 +983,7 @@ a:hover {
 
 
 .main-image {
-    background-image: linear-gradient(rgb(48 80 79 / 80%), rgb(48 80 79 / 50%)), url(/static/img/coming-soon.jpeg);
+    background-image: linear-gradient(rgb(48 80 79 / 80%), rgb(48 80 79 / 50%)), url(../img/coming-soon.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
