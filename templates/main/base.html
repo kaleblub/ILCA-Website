@@ -32,6 +32,8 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -39,15 +41,14 @@
 
 <body>
 <!-- Header Begin -->
-<header>    
-    <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close">
-                <span class="icofont-close js-menu-toggle"></span>
-            </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-    </div>
+<header>
+    <!-- Hamburger Icon -->
+    <!-- <div class="hamburger-menu">
+        <span class="icofont-navigation-menu"></span>
+    </div> -->
+    <!-- <label class="hamburger-menu">
+        <input type="checkbox">
+    </label> -->
     <nav class="site-nav mb-5">
         <div class="pb-2 top-bar mb-3">
             <div class="container">
@@ -63,27 +64,28 @@
                 </div>
             </div>
         </div>
-        <div class="sticky-nav js-sticky-header">
+        <div class="sticky-nav js-sticky-header sticky-top">
             <div class="container position-relative">
                 <div class="site-navigation text-center">
                     <a href="{% url 'home' %}" class="logo menu-absolute m-0">ILCA<span class="text-primary">.</span></a>
-                    <ul class="js-clone-nav d-none d-lg-inline-block site-menu">
-                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <ul class="mobile-menu d-none d-lg-inline-block site-menu"> <!-- js-clone-nav "> -->
+                        <li class="active"><a href="{% url 'home' %}" data-value="Home">Home</a></li>
+                        <li><a href="{% url 'about' %}" data-value="About">About</a></li>
+                        <li><a href="{% url 'contact' %}" data-value="Contact">Contact</a></li>
                         <li class="has-children">
-                            <a href="#">Language</a>
+                            <a href="#" data-value="Language">Language</a>
                             <ul class="dropdown">
-                                <li><a href="#">Arabic</a></li></li>
-                                <li><a href="#">English</a></li></li>
-                                <li><a href="#">French</a></li></li>
-                                <li><a href="#">Kabyle</a></li></li>
+                                <li><a href="#" data-value="Arabic">Arabic</a></li></li>
+                                <li><a href="#" data-value="English">English</a></li></li>
+                                <li><a href="#" data-value="French">French</a></li></li>
+                                <li><a href="#" data-value="Kabyle">Kabyle</a></li></li>
                             </ul>
                         </li>
                     </ul>
-                    <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+                    <div id="mobile-menu-wrap"></div>
+                    <!-- <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
                         <span></span>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>
@@ -110,14 +112,16 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- SlickNav -->
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+
     <!-- WOW.js (if used) -->
-    <script src="{% static 'js/wow.min.js' %}"></script>
+    <!-- <script src="{% static 'js/wow.min.js' %}"></script> -->
 
     <!-- Owl Carousel (if used) -->
-    <link rel="stylesheet" href="{% static 'js/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'js/owl.theme.default.min.css' %}">
     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 
+    <!-- Custom Scripts -->
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 

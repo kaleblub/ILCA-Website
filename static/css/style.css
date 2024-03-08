@@ -169,6 +169,88 @@ a:hover {
 /*---------------------
   Navbar
 -----------------------*/
+
+/* Hamburger Icon */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    /* background-color: #fff; Adjust background color as needed */
+    z-index: 1000; /* Ensure the mobile menu is on top of other elements */
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list li {
+    padding: 10px 20px;
+}
+
+.menu-list li:hover {
+    background-color: #f0f0f0; /* Adjust hover background color as needed */
+}
+
+.has-children .submenu {
+    display: none;
+}
+
+.has-children:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    background-color: #fff; /* Adjust submenu background color as needed */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px; /* Adjust submenu width as needed */
+}
+
+.submenu li {
+    border-top: 1px solid #ccc; /* Adjust submenu border color as needed */
+}
+
+/* Close Button */
+.close-menu {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styling for close button icon (you may need to add this if using an icon font) */
+.close-menu .icofont-close {
+    /* Add your icon font styles here */
+}
+
+@media screen and (min-width: 991px) {
+    .slicknav_btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .site-menu > li {
+        display: none!important;
+    }
+}
+
+
 .top-bar a {
     color: var(--light);
 }
@@ -242,6 +324,8 @@ a:hover {
 }
 
 .site-nav .site-navigation .site-menu {
+    display: flex!important;
+    justify-content: flex-end;
     margin-bottom: 0;
     position: absolute;
     top: -10px;
@@ -803,10 +887,49 @@ a:hover {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .site-menu {
-        right: 115px;
-    }
-}  
+}
+
+/* SlickNav */
+.slicknav_menu {
+    background: transparent;
+    padding: 0;
+    display: block;
+    font-size: 25px;
+}
+
+.slicknav_nav ul {
+    margin: 0;
+    padding: 10px 30px;
+}
+
+.slicknav_nav .slicknav_row,
+.slicknav_nav a {
+    padding: 7px 0;
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.slicknav_nav .slicknav_row:hover {
+    border-radius: 0;
+    background: transparent;
+}
+
+.slicknav_nav a:hover {
+    border-radius: 0;
+    background: transparent;
+}
+
+.slicknav_nav {
+    /*    background: #222222;*/
+}
+
+.slicknav_btn {
+    position: absolute;
+    right: -15px;
+    top: -10px;
+    background: transparent;
+}
 
 /* Burger */
 .burger {
