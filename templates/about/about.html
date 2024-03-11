@@ -1,15 +1,17 @@
 {% extends "main/base.html" %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% load static %}
 {% block content %}
 <div class="container-fluid bg-primary py-5 mb-5 page-header page-header-about-image">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-                <h1 class="display-3 text-white animated slideInDown">About ILCA</h1>
+                <h1 class="display-3 text-white animated slideInDown">{% translate 'About ILCA' %}</h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Home</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                        <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">{% translate 'Home' %}</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">{% translate 'About' %}</li>
                     </ol>
                 </nav>
             </div>
@@ -27,31 +29,10 @@
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                 <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">We are the <b>I</b>nternational <b>L</b>earning <b>C</b>enter in <b>A</b>lgeria</h1>
-                <p class="mb-4">At ILCA, we are committed to
-                    helping our students master English
-                    and Spanish with confidence
-                    and fluency. Our passionate teachers
-                    use interactive and
-                    responsive teaching methods, ensuring
-                    a stimulating and effective
-                    learning experience.
-                    </p>
-                    <p class="mb-4">Whether you are a beginner or
-                        want to perfect your
-                        language skills, our school is the
-                        ideal place to achieve your
-                        goals. Join us in a dynamic
-                        and friendly environment, where
-                        learning becomes an exciting
-                        adventure.</p>
-                    <p class="mb-4">At ILCA, we transform language
-                        barriers into bridges of opportunity.
-                        Speak English and Spanish with
-                        confidence, open new doors and broaden
-                        your horizons. Register today and
-                        embark on an exceptional language
-                        journey!”</p>
+                <h1 class="mb-4">{% translate "We are the <b>I</b>nternational <b>L</b>earning <b>C</b>enter in <b>A</b>lgeria" %}</h1>
+                <p class="mb-4">{% translate "At ILCA, we are committed to helping our students master English and Spanish with confidence and fluency. Our passionate teachers use interactive and responsive teaching methods, ensuring a stimulating and effective learning experience." %}</p>
+                    <p class="mb-4">{% translate "Whether you are a beginner or want to perfect your language skills, our school is the ideal place to achieve your goals. Join us in a dynamic and friendly environment, where learning becomes an exciting adventure." %}</p>
+                    <p class="mb-4">{% translate "At ILCA, we transform language barriers into bridges of opportunity. Speak English and Spanish with confidence, open new doors and broaden your horizons. Register today and embark on an exceptional language journey!" %}</p>
                 <!-- <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Advanced Courses</p>
@@ -101,7 +82,7 @@
                                     </div>
                                 </div>
                                 <div class="text-left p-4">
-                                    <h5 class="mb-0">{{ course.2 }}</h5>
+                                    <h5 class="mb-0" id="{{ course.2|slugify }}-card">{% translate course.2 %}</h5>
                                     <br>
                                     <p>{{ course.3 }}</p>
                                 </div>
@@ -119,8 +100,8 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-            <h1 class="mb-5">Expert Instructors</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">{% translate "Instructors" %}</h6>
+            <h1 class="mb-5">{% translate "Expert Instructors" %}</h1>
         </div>
         <div class="row g-4">
             {% for instructor in teammembers %}

@@ -1,4 +1,6 @@
 {% extends "main/base.html" %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% load static %}
 {% block content %}
 <!-- Hero Start -->
@@ -8,11 +10,11 @@
         <div class="container">
             <div class="row justify-content-start">
                 <div class="col-sm-10 col-lg-8">
-                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">International Learning Center Algeria, in Bejaia</h5>
-                    <h1 class="main-hero-text display-3 text-white animated slideInDown">Unlock Your Language Potential with the International Learning Center</h1>
-                    <p class="main-hero-summary fs-5 text-white mb-4 pb-2">Discover the art of communication at ILCA, your ultimate language destination in Bejaia! We are proud to offer exceptional English and Spanish lessons, taught by professional native teachers.</p>
-                    <a href="{% url 'about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Learn More</a>
-                    <a href="{% url 'register' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Register Now</a>
+                    <h5 class="text-primary text-uppercase mb-3 animated slideInDown">{% translate "International Learning Center Algeria, in Bejaia" %}</h5>
+                    <h1 class="main-hero-text display-3 text-white animated slideInDown">{% translate "Unlock Your Language Potential with the International Learning Center" %}</h1>
+                    <p class="main-hero-summary fs-5 text-white mb-4 pb-2">{% translate "Discover the art of communication at ILCA, your ultimate language destination in Bejaia! We are proud to offer exceptional English and Spanish lessons, taught by professional native teachers." %}</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">{% translate "Learn More" %}</a>
+                    <a href="{% url 'register' %}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">{% translate "Register Now" %}</a>
                 </div>
             </div>
         </div>
@@ -30,36 +32,36 @@
                 </div>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">About ILCA Bejaia</h6>
-                <h1 class="mb-4">Welcome to ILCA</h1>
-                <p class="mb-4">Unlock the art of effective communication with ILCA, where we take pride in offering exceptional English and Spanish lessons. Our team of professional, native teachers is dedicated to helping you master these languages with confidence and fluency. Explore the diverse range of courses and programs we have tailored for learners of all levels.</p>
+                <h6 class="section-title bg-white text-start text-primary pe-3">{% translate "About ILCA Bejaia" %}</h6>
+                <h1 class="mb-4">{% translate "Welcome to ILCA" %}</h1>
+                <p class="mb-4">{% translate "Unlock the art of effective communication with ILCA, where we take pride in offering exceptional English and Spanish lessons. Our team of professional, native teachers is dedicated to helping you master these languages with confidence and fluency. Explore the diverse range of courses and programs we have tailored for learners of all levels." %}</p>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Advanced Courses</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Advanced Courses" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Intermediate Courses</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Intermediate Courses" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Beginner Courses</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Beginner Courses" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Group Lessons</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Group Lessons" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Private Lessons</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Private Lessons" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Adult Courses</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Adult Courses" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Classes for Children</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Classes for Children" %}</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>Academic Support for Each Level</p>
+                        <p class="mb-0"><i class="fa fa-dot-circle text-primary me-2"></i>{% translate "Academic Support for Each Level" %}</p>
                     </div>
                 </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'about' %}">More About ILCA</a>
+                <a class="btn btn-primary py-3 px-5 mt-2" href="{% url 'about' %}">{% translate "More About ILCA" %}</a>
             </div>
         </div>
     </div>
@@ -70,40 +72,40 @@
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="text-center">
-            <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-            <h1 class="mb-5">Our Students Say!</h1>
+            <h6 class="section-title bg-white text-center text-primary px-3">{% translate "Testimonial" %}</h6>
+            <h1 class="mb-5">{% translate "Our Students Say!" %}</h1>
         </div>
         <div class="owl-carousel testimonial-carousel position-relative">
             <div class="testimonial-item text-center">
                 <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-1.jpg' %}" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
+                <h5 class="mb-0">{% translate "Client Name" %}</h5>
+                <p>{% translate "Profession" %}</p>
                 <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis in mollitia ipsam ipsum voluptatibus, commodi eos voluptates. Quaerat, quod iusto non reprehenderit natus similique quo quia aperiam debitis sequi magni.</p>
+                <p class="mb-0">{% translate "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis in mollitia ipsam ipsum voluptatibus, commodi eos voluptates. Quaerat, quod iusto non reprehenderit natus similique quo quia aperiam debitis sequi magni." %}</p>
                 </div>
             </div>
             <div class="testimonial-item text-center">
                 <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-2.jpg' %}" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
+                <h5 class="mb-0">{% translate "Client Name" %}</h5>
+                <p>{% translate "Profession" %}</p>
                 <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident architecto consequatur iure quas officiis explicabo, id molestias blanditiis optio perferendis, modi consequuntur culpa nam voluptatem adipisci eius quidem. Neque.</p>
+                <p class="mb-0">{% translate "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non provident architecto consequatur iure quas officiis explicabo, id molestias blanditiis optio perferendis, modi consequuntur culpa nam voluptatem adipisci eius quidem. Neque." %}</p>
                 </div>
             </div>
             <div class="testimonial-item text-center">
                 <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-3.jpg' %}" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
+                <h5 class="mb-0">{% translate "Client Name" %}</h5>
+                <p>{% translate "Profession" %}</p>
                 <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Beatae accusamus, nobis deserunt ipsum, est quis doloribus deleniti commodi eos non cupiditate perspiciatis soluta nam, obcaecati in illum cumque voluptates. Dolores.</p>
+                <p class="mb-0">{% translate "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Beatae accusamus, nobis deserunt ipsum, est quis doloribus deleniti commodi eos non cupiditate perspiciatis soluta nam, obcaecati in illum cumque voluptates. Dolores." %}</p>
                 </div>
             </div>
             <div class="testimonial-item text-center">
                 <img class="border rounded-circle p-2 mx-auto mb-3" src="{% static 'img/testimonial-4.jpg' %}" style="width: 80px; height: 80px;">
-                <h5 class="mb-0">Client Name</h5>
-                <p>Profession</p>
+                <h5 class="mb-0">{% translate "Client Name" %}</h5>
+                <p>{% translate "Profession" %}</p>
                 <div class="testimonial-text bg-light text-center p-4">
-                <p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque vel, dignissimos facilis cupiditate nobis nisi laboriosam explicabo minima laudantium aperiam, nostrum. Ad doloribus inventore cupiditate enim ullam a unde libero?</p>
+                <p class="mb-0">{% translate "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque vel, dignissimos facilis cupiditate nobis nisi laboriosam explicabo minima laudantium aperiam, nostrum. Ad doloribus inventore cupiditate enim ullam a unde libero?" %}</p>
                 </div>
             </div>
         </div>
@@ -115,8 +117,8 @@
 <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Teachers</h6>
-                <h1 class="mb-5">Our Teachers</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{% translate "Teachers" %}</h6>
+                <h1 class="mb-5">{% translate "Our Teachers" %}</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -132,8 +134,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">{% translate "Instructor Name" %}</h5>
+                            <small>{% translate "Designation" %}</small>
                         </div>
                     </div>
                 </div>
@@ -150,8 +152,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">{% translate "Instructor Name" %}</h5>
+                            <small>{% translate "Designation" %}</small>
                         </div>
                     </div>
                 </div>
@@ -168,8 +170,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">{% translate "Instructor Name" %}</h5>
+                            <small>{% translate "Designation" %}</small>
                         </div>
                     </div>
                 </div>
@@ -186,8 +188,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">{% translate "Instructor Name" %}</h5>
+                            <small>{% translate "Designation" %}</small>
                         </div>
                     </div>
                 </div>
