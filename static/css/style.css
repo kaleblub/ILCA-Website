@@ -475,6 +475,24 @@ a:hover {
     border-radius: var(--standard-border-radius);
 }
 
+@media (max-width: 991px) {
+    .mobile-dropdown::before {
+        background-color: transparent;
+    }
+    .slicknav_nav::before {
+        content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 130px;
+    top: -8px;
+    display: flex;
+    background-color: white;
+    transform: rotate(45deg);
+    border-radius: var(--standard-border-radius);
+    }
+}
+
 .site-nav .site-navigation .site-menu .has-children .dropdown>li>a:hover {
     color: var(--primary-clr);
     background-color: var(--lightened-accent-background);
@@ -921,7 +939,16 @@ a:hover {
 }
 
 .slicknav_nav {
-    /*    background: #222222;*/
+    background: var(--dark-accent-background);
+    padding: 12px;
+    border-radius: var(--standard-border-radius);
+    font-size: 0.8em;
+    right: 1.5rem;
+    top: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .slicknav_btn {
