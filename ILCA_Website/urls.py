@@ -10,6 +10,7 @@ from main import views as main_views
 from registration import views as registration_views
 from about import views as about_views
 from contact import views as contact_views
+from accounts import views as account_views
 
 urlpatterns = [
     # Front End URLs
@@ -21,10 +22,10 @@ urlpatterns = [
     path('<str:language>/', main_views.set_language, name="set_language"),
     
     # LMS URLs
-    # path('app/', include('app.urls')),
-    # path('accounts/', include('accounts.urls')),
-    # path('programs/', include('course.urls')),
-    # path('result/', include('result.urls')),
+    path('app/', include('app.urls')),
+    path('accounts/', include('accounts.urls')),
+    path('programs/', include('course.urls')),
+    path('result/', include('result.urls')),
     # path('search/', include('search.urls')),
     # path('quiz/', include('quiz.urls')),
 

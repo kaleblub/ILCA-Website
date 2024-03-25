@@ -3,7 +3,9 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div id="login">
+<!-- Staged for deletion  
+  
+  <div id="login">
   <div class="login-title blue-gradient">
     <i class="fas fa-lock" style="left: 15px"></i>
     <br>
@@ -33,7 +35,49 @@
     <br>
     <a  href="{% url 'register' %}" class="link">Don't have an account ?</a>
   </div>
+</div> -->
+
+<div class="row" id="login">
+  <div class="col-md-6 page-header-login-image">
+    <div class="login-title text-center d-flex flex-column justify-content-center">
+      <h2>Welcome Back to ILCA Student Portal</h2>
+      <p>Sign in to continue to your student dashboard</p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="d-flex flex-column justify-content-center">
+    <form action="" method="POST" id="login-form" class="px-3">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i>Email</label>
+        <input type="email" name="email" id="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-key"></i>Password</label>
+        <input type="password" name="password" id="password" class="form-control" required>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="keep-logged-in">
+        <label class="form-check-label" for="keep-logged-in">Keep me logged in</label>
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login Now</button>
+    </form>
+    <br>
+    <div class="text-left">
+      <a href="{% url 'password_reset' %}" class="link">Forgot your password?</a>
+      <br>
+      <a href="{% url 'register' %}" class="link">Not registered yet? Register now</a>
+    </div>
+    <div class="social-login">
+      <p>Or sign in with:</p>
+      <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#" class="btn btn-danger"><i class="fab fa-google"></i> Google</a>
+      <a href="#" class="btn btn-dark"><i class="fab fa-apple"></i> Apple</a>
+    </div>
+  </div>
+  </div>
 </div>
+
 {% endblock content %}
 
 {% block js %}

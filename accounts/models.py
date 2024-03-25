@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import AbstractUser, UserManager
+from django.contrib.auth.models import AbstractUser, UserManager, Group, Permission
 from django.conf import settings
 
 from django.db.models import Q
@@ -62,6 +62,23 @@ class User(AbstractUser):
     email = models.EmailField(blank=True, null=True)
 
     username_validator = ASCIIUsernameValidator()
+
+    groups = models.ManyToManyField(
+        Group,
+        verbose_name=('groups'),
+        blank=True,
+        related_name='custom_user_set',
+        related_query_name='custom_user',
+    )
+
+    user_permissions = models.ManyToManyField(
+        Permission,
+        verbose_name=('user permissions'),
+        blank=True,
+        related_name='custom_user_set',
+        related_query_name='custom_user',
+        help_text=('Specific permissions for this user.'),
+    )
 
     objects = UserManager()
 

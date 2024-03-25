@@ -66,16 +66,16 @@ PROJECT_APPS = [
     # 'registration.apps.RegistrationConfig',
 
     # LMS Apps
-    # "app.apps.AppConfig",
-    # "accounts.apps.AccountsConfig",
-    # "course.apps.CourseConfig",
-    # "result.apps.ResultConfig",
+    "app.apps.AppConfig",
+    "accounts.apps.AccountsConfig",
+    "course.apps.CourseConfig",
+    "result.apps.ResultConfig",
     # "search.apps.SearchConfig",
     # "quiz.apps.QuizConfig",
     # "payments.apps.PaymentsConfig",
 ]
 
-INSTALLED_APPS = THIRD_PARTY_APPS + DJANGO_APPS + PROJECT_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -94,7 +94,10 @@ ROOT_URLCONF = 'ILCA_Website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [
+            os.path.join(BASE_DIR, "templates"),
+            "/env/lib/python3.11/site-packages/crispy_bootstrap5/templates",
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,6 +145,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
 ]
 
 
