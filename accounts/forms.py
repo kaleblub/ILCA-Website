@@ -115,20 +115,20 @@ class StudentAddForm(UserCreationForm):
         label="Last name",
     )
 
-    level = forms.CharField(
-        widget=forms.Select(
-            choices=LEVEL,
-            attrs={
-                'class': 'browser-default custom-select form-control',
-            }
-        ),
-    )
+    # level = forms.CharField(
+    #     widget=forms.Select(
+    #         choices=LEVEL,
+    #         attrs={
+    #             'class': 'browser-default custom-select form-control',
+    #         }
+    #     ),
+    # )
 
-    department = forms.ModelChoiceField(
-        queryset=Program.objects.all(),
-        widget=forms.Select(attrs={'class': 'browser-default custom-select form-control'}),
-        label="Department",
-    )
+    # department = forms.ModelChoiceField(
+    #     queryset=Program.objects.all(),
+    #     widget=forms.Select(attrs={'class': 'browser-default custom-select form-control'}),
+    #     label="Department",
+    # )
 
     email = forms.EmailField(
         widget=forms.TextInput(

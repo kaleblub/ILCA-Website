@@ -11,14 +11,14 @@ from .validators import ASCIIUsernameValidator
 
 
 # LEVEL_COURSE = "Level course"
-BACHLOAR_DEGREE = "Bachloar"
-MASTER_DEGREE = "Master"
+# BACHLOAR_DEGREE = "Bachloar"
+# MASTER_DEGREE = "Master"
 
-LEVEL = (
-    # (LEVEL_COURSE, "Level course"),
-    (BACHLOAR_DEGREE, "Bachloar Degree"),
-    (MASTER_DEGREE, "Master Degree"),
-)
+# LEVEL = (
+#     # (LEVEL_COURSE, "Level course"),
+#     (BACHLOAR_DEGREE, "Bachloar Degree"),
+#     (MASTER_DEGREE, "Master Degree"),
+# )
 
 FATHER = "Father"
 MOTHER = "Mother"
@@ -144,8 +144,8 @@ class StudentManager(models.Manager):
 class Student(models.Model):
     student = models.OneToOneField(User, on_delete=models.CASCADE)
     # id_number = models.CharField(max_length=20, unique=True, blank=True)
-    level = models.CharField(max_length=25, choices=LEVEL, null=True)
-    department = models.ForeignKey(Program, on_delete=models.CASCADE, null=True)
+    # level = models.CharField(max_length=25, choices=LEVEL, null=True)
+    # department = models.ForeignKey(Program, on_delete=models.CASCADE, null=True)
 
     objects = StudentManager()
 
@@ -179,9 +179,9 @@ class Parent(models.Model):
         return self.user.username
 
 
-class DepartmentHead(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    department = models.ForeignKey(Program, on_delete=models.CASCADE, null=True)
+# class DepartmentHead(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     # department = models.ForeignKey(Program, on_delete=models.CASCADE, null=True)
 
-    def __str__(self):
-        return "{}".format(self.user)
+#     def __str__(self):
+#         return "{}".format(self.user)

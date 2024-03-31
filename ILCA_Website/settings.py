@@ -70,9 +70,9 @@ PROJECT_APPS = [
     "accounts.apps.AccountsConfig",
     "course.apps.CourseConfig",
     "result.apps.ResultConfig",
-    # "search.apps.SearchConfig",
-    # "quiz.apps.QuizConfig",
-    # "payments.apps.PaymentsConfig",
+    "search.apps.SearchConfig",
+    "quiz.apps.QuizConfig",
+    "payments.apps.PaymentsConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS

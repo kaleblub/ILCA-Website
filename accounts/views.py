@@ -4,6 +4,7 @@ from django.http import Http404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.views import LoginView
 from django.views.generic import CreateView, ListView
 from django.core.paginator import Paginator
 from django.db.models import Q
@@ -21,12 +22,10 @@ from app.models import Session, Semester
 from .forms import StaffAddForm, StudentAddForm, ProfileUpdateForm, ParentAddForm
 from .models import User, Student, Parent
 
-
 def validate_username(request):
     username = request.GET.get("username", None)
     data = {"is_taken": User.objects.filter(username__iexact=username).exists()}
     return JsonResponse(data)
-
 
 def register(request):
     if request.method == "POST":
@@ -42,9 +41,25 @@ def register(request):
         form = StudentAddForm(request.POST)
     return render(request, "registration/register.html", {"form": form})
 
-# def login(request):
-#     return render(request, "registration/login.html", {})
+# Create your views here.
+def registration(request):
+	return render(request, 'registration/register.html')
 
+class CustomLoginView(LoginView):
+    def form_valid(self, form):
+        # Perform the default login action
+        super().form_valid(form)
+        # Redirect the user to the next URL after successful login
+        return HttpResponseRedirect(self.get_success_url())
+
+    def get_success_url(self):
+        # Get the URL to redirect to after successful login
+        # Use the 'next' parameter if present, otherwise redirect to a default URL
+        next_url = self.request.POST.get('next')
+        if next_url:
+            return next_url
+        else:
+            return reverse_lazy('dashboard')  # Redirect to default dashboard URL
 
 @login_required
 def profile(request):

@@ -4,7 +4,7 @@ from django.contrib.auth.views import (
     PasswordResetCompleteView, LoginView, LogoutView
     )
 from .views import (
-        profile, profile_single, admin_panel, 
+        CustomLoginView, profile, profile_single, admin_panel, 
         profile_update, change_password, 
         LecturerListView, StudentListView, 
         staff_add_view, edit_staff, 
@@ -38,7 +38,7 @@ urlpatterns = [
     path('ajax/validate-username/', validate_username, name='validate_username'),
 
     path('register/', register, name='register'),
-    path('login/', LoginView.as_view(template_name='templates/registration/login.html'), name='login'),
+    path('login/', CustomLoginView.as_view(template_name='templates/registration/login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout', kwargs={'next_page': '/'}),
 
     # path('add-student/', StudentAddView.as_view(), name='add_student'),
