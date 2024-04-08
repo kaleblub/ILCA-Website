@@ -33,7 +33,7 @@
             <div class="p-3">
 
                 <div class="form-group">
-                    <b>ID No.</b>{{ form.username }}
+                    <b>Username</b>{{ form.username }}
                     <span class="danger">{{ form.username.errors }}</span>
                     <p class="text-muted-xs">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
                 </div>
@@ -106,5 +106,32 @@
     </div>
     <center><input class="btn btn-outline-primary" type="submit" value="Save"></center>
 </form>
+
+<script>
+	// Get references to the input fields
+	const firstNameInput = document.getElementById('id_first_name');
+    const lastNameInput = document.getElementById('id_last_name');
+    const usernameInput = document.getElementById('username_id');
+
+	// Function to update the username field
+	function updateUsername() {
+		// Get the values of the first name and last name inputs
+		const firstName = firstNameInput.value.trim();
+		const lastName = lastNameInput.value.trim();
+
+		// Combine the first name and last name to form the username
+		const username = firstName.toLowerCase() + '_' + lastName.toLowerCase();
+
+		// Update the value of the username input field
+		usernameInput.value = username;
+	}
+
+	// Add event listeners to the first name and last name inputs
+	firstNameInput.addEventListener('input', updateUsername);
+	lastNameInput.addEventListener('input', updateUsername);
+
+	// Call the updateUsername function initially to set the initial username
+	updateUsername();
+</script>
 
 {% endblock content %}

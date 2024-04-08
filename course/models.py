@@ -182,9 +182,9 @@ def video_pre_save_receiver(sender, instance, *args, **kwargs):
 pre_save.connect(video_pre_save_receiver, sender=UploadVideo)
 
 
-class CourseOffer(models.Model):
-	"""NOTE: Only department head can offer semester courses"""
-	dep_head = models.ForeignKey("accounts.DepartmentHead", on_delete=models.CASCADE)
+# class CourseOffer(models.Model):
+# 	"""NOTE: Only department head can offer semester courses"""
+# 	dep_head = models.ForeignKey("accounts.DepartmentHead", on_delete=models.CASCADE)
 
-	def __str__(self):
-		return "{}".format(self.dep_head)
+# 	def __str__(self):
+# 		return "{}".format(self.dep_head)
