@@ -24,11 +24,13 @@ class StaffAddForm(UserCreationForm):
 
     address = forms.CharField(
         max_length=30, widget=forms.TextInput(attrs={'type': 'text', 'class': 'form-control', }),
-        label="Address", )
+        label="Address", 
+        required=False, )
 
     phone = forms.CharField(
         max_length=30, widget=forms.TextInput(attrs={'type': 'text', 'class': 'form-control', }),
-        label="Mobile No.", )
+        label="Mobile No.", 
+        required=False, )
 
     email = forms.CharField(
         max_length=30, widget=forms.TextInput(attrs={'type': 'text', 'class': 'form-control', }),
@@ -80,6 +82,7 @@ class StudentAddForm(UserCreationForm):
             }
         ),
         label="Address",
+        required=False, 
     )
 
     phone = forms.CharField(
@@ -91,6 +94,7 @@ class StudentAddForm(UserCreationForm):
             }
         ),
         label="Mobile No.",
+        required=False, 
     )
 
     first_name = forms.CharField(
@@ -190,11 +194,13 @@ class ProfileUpdateForm(UserChangeForm):
 
     phone = forms.CharField(
         widget=forms.TextInput(attrs={'type': 'text', 'class': 'form-control', }),
-        label="Phone No.", )
+        label="Phone No.", 
+        required=False, )
 
     address = forms.CharField(
         widget=forms.TextInput(attrs={'type': 'text', 'class': 'form-control', }),
-        label="Address / city", )
+        label="Address / city",
+        required=False, )
 
     class Meta:
         model = User
