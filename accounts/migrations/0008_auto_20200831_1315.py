@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('phone', models.CharField(blank=True, max_length=60, null=True)),
                 ('address', models.CharField(blank=True, max_length=60, null=True)),
                 ('email', models.EmailField(blank=True, max_length=254, null=True)),
-                ('relation_ship', models.TextField(blank=True, choices=[('Father', 'Father'), ('Mother', 'Mother'), ('Brother', 'Brother'), ('Sister', 'Sister'), ('Grand mother', 'Grand mother'), ('Grand father', 'Grand father'), ('Other', 'Other')])),
+                ('relationship', models.TextField(blank=True, choices=[('Father', 'Father'), ('Mother', 'Mother'), ('Brother', 'Brother'), ('Sister', 'Sister'), ('Grand mother', 'Grand mother'), ('Grand father', 'Grand father'), ('Other', 'Other')])),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
         ),

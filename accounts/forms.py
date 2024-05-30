@@ -126,12 +126,14 @@ class StudentAddForm(UserCreationForm):
     #             'class': 'browser-default custom-select form-control',
     #         }
     #     ),
+    #     required=False,
     # )
 
     # department = forms.ModelChoiceField(
     #     queryset=Program.objects.all(),
     #     widget=forms.Select(attrs={'class': 'browser-default custom-select form-control'}),
     #     label="Department",
+    #     required=False,
     # )
 
     email = forms.EmailField(
@@ -172,8 +174,8 @@ class StudentAddForm(UserCreationForm):
         user.save()
         student = Student.objects.create(
             student=user,
-            level=self.cleaned_data.get('level'),
-            department=self.cleaned_data.get('department')
+            # level=self.cleaned_data.get('level'),
+            # department=self.cleaned_data.get('department')
         )
         student.save()
         return user
@@ -287,9 +289,9 @@ class ParentAddForm(UserCreationForm):
         label="Student",
     )
 
-    relation_ship = forms.CharField(
+    relationship = forms.CharField(
         widget=forms.Select(
-            choices=RELATION_SHIP,
+            choices=RELATIONSHIP,
             attrs={'class': 'browser-default custom-select form-control',}
         ),
     )
@@ -323,7 +325,7 @@ class ParentAddForm(UserCreationForm):
         parent = Parent.objects.create(
             user=user,
             student=self.cleaned_data.get('student'),
-            relation_ship=self.cleaned_data.get('relation_ship')
+            relationship=self.cleaned_data.get('relationship')
         )
         parent.save()
         return user

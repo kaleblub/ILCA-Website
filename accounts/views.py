@@ -89,17 +89,17 @@ def profile(request):
             parent = Parent.objects.get(student=level)
         except:
             parent = "no parent set"
-        courses = TakenCourse.objects.filter(
-            student__student__id=request.user.id, course__level=level.level
-        )
-        context = {
-            "title": request.user.get_full_name,
-            "parent": parent,
-            "courses": courses,
-            "level": level,
-            "current_session": current_session,
-            "current_semester": current_semester,
-        }
+            courses = TakenCourse.objects.filter(
+                student__student__id=request.user.id, course__level=level.level
+            )
+            context = {
+                "title": request.user.get_full_name,
+                "parent": parent,
+                "courses": courses,
+                "level": level,
+                "current_session": current_session,
+                "current_semester": current_semester,
+            }
         return render(request, "accounts/profile.html", context)
     else:
         staff = User.objects.filter(is_lecturer=True)

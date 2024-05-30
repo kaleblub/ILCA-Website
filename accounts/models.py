@@ -24,17 +24,17 @@ FATHER = "Father"
 MOTHER = "Mother"
 BROTHER = "Brother"
 SISTER = "Sister"
-GRAND_MOTHER = "Grand mother"
-GRAND_FATHER = "Grand father"
+GRANDMOTHER = "Grandmother"
+GRANDFATHER = "Grandfather"
 OTHER = "Other"
 
-RELATION_SHIP  = (
+RELATIONSHIP  = (
     (FATHER, "Father"),
     (MOTHER, "Mother"),
     (BROTHER, "Brother"),
     (SISTER, "Sister"),
-    (GRAND_MOTHER, "Grand mother"),
-    (GRAND_FATHER, "Grand father"),
+    (GRANDMOTHER, "Grandmother"),
+    (GRANDFATHER, "Grandfather"),
     (OTHER, "Other"),
 )
 
@@ -173,7 +173,7 @@ class Parent(models.Model):
     email = models.EmailField(blank=True, null=True)
 
     # What is the relationship between the student and the parent (i.e. father, mother, brother, sister)
-    relation_ship = models.TextField(choices=RELATION_SHIP, blank=True)
+    relationship = models.TextField(choices=RELATIONSHIP, blank=True)
 
     def __str__(self):
         return self.user.username
