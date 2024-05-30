@@ -286,7 +286,6 @@ def semester_delete_view(request, pk):
 #     return response
 
 @login_required
-@admin_required
 def dashboard_view(request):
     num_students = User.objects.filter(groups__name='Students').count()
     num_teachers = User.objects.filter(groups__name='Teachers').count()
