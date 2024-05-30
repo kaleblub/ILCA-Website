@@ -3,7 +3,7 @@ from django.http import Http404
 from django.contrib.auth.decorators import user_passes_test
 
 
-def student_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=Http404):
+def student_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url='accounts:login'):
     """
     Decorator for views that checks that the logged in user is a student,
     redirects to the log-in page if necessary.
@@ -18,7 +18,7 @@ def student_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, log
     return actual_decorator
 
 
-def lecturer_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=Http404):
+def lecturer_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url='accounts:login'):
     """
     Decorator for views that checks that the logged in user is a teacher,
     redirects to the log-in page if necessary.
@@ -33,7 +33,7 @@ def lecturer_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, lo
     return actual_decorator
 
 
-def admin_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=Http404):
+def admin_required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url='accounts:login'):
     """
     Decorator for views that checks that the logged in user is a teacher,
     redirects to the log-in page if necessary.
