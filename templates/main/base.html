@@ -36,6 +36,10 @@
     <link href="{% static 'css/slicknav.min.css' %}" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
@@ -58,13 +62,6 @@
                         <a href="#" class="mr-3" id="copyPhone"><span class="icon-phone mr-2"></span> <span class="d-none d-lg-inline-block phone-link">+213 5 6068 0908</span></a>
                         <a href="#" class="mr-3" id="copyEmail"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block email-link">ilca.bejaia@gmail.com</span></a>
                     </div>
-                    <div class="col-6 col-lg-3 text-right">
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'dashboard' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">{% translate 'Dashboard' %}</a>
-                        {% else %}
-                            <a href="{% url 'login' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">{% translate 'Login/Register' %}</a>
-                        {% endif %}
-                        </div>
                 </div>
             </div>
         </div>
@@ -95,6 +92,13 @@
                             </ul>
                         </li>
                     </ul>
+                    <div class="col-6 col-lg-3 text-right">
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'dashboard' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">{% translate 'Dashboard' %}</a>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="btn-book btn btn-secondary btn-sm menu-absolute">{% translate 'Login/Register' %}</a>
+                        {% endif %}
+                    </div>
                     <div id="mobile-menu-wrap"></div>
                     <!-- <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
                         <span></span>

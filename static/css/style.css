@@ -42,6 +42,13 @@ footer {
     font-weight: 700 !important;
 }
 
+.allura-regular {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}  
+
 .back-to-top {
     position: fixed;
     display: flex!important;
@@ -238,9 +245,17 @@ a:hover {
     /* Add your icon font styles here */
 }
 
-@media screen and (min-width: 991px) {
-    .slicknav_btn {
-        display: none;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem!important;
+    }
+
+    .wow {
+        /* padding: 25px 70px 0 70px; */
+    }
+    .btn-book {
+        right: -300px;
+        margin-top: -55px!important;
     }
 }
 
@@ -250,6 +265,26 @@ a:hover {
     }
 }
 
+@media screen and (min-width: 991px) {
+    .slicknav_btn {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .btn-book {
+        right: -695px;
+        margin-top: -55px!important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .btn-book {
+        right: -830px;
+        margin-top: -55px!important;
+    }
+
+}
 
 .top-bar a {
     color: var(--light);
@@ -276,7 +311,8 @@ a:hover {
         top: -32px!important;
     }
     .btn-book {
-        margin-top: 37px!important;
+        margin-top: 0px!important;
+        right: -300px;
     }
 }
 
@@ -290,15 +326,10 @@ a:hover {
 
 .btn-book {
     position: absolute;
-    right: 15px;
+    /* right: 15px; */
     margin-top: -22px;
 }
 
-@media (max-width: 991.98px) {
-    .btn-book {
-        right: 60px;
-    }
-}
 .site-nav {
     position: absolute;
     width: 100%;
@@ -904,9 +935,6 @@ a:hover {
     color: var(--primary-clr) !important;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
-
 /* SlickNav */
 .slicknav_menu {
     background: transparent;
@@ -1139,17 +1167,6 @@ a:hover {
     background-size: cover;
     position: relative;
     height: 100%;
-}
-
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem!important;
-    }
-
-    .wow {
-        /* padding: 25px 70px 0 70px; */
-    }
 }
 
 .page-header {
