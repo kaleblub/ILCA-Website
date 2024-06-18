@@ -245,46 +245,96 @@ a:hover {
     /* Add your icon font styles here */
 }
 
+/*----------------------- 
+    MEDIA QUERIES  
+-------------------------*/
+
+/* Mobile Devices (up to 575px) */
+@media (max-width: 575px) {
+    .overlay {
+        height: 352px;
+    }
+}
+
+/* Small Tablets and Mobile Devices (up to 768px) */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem!important;
-    }
-
-    .wow {
-        /* padding: 25px 70px 0 70px; */
+        font-size: 2rem !important;
     }
     .btn-book {
-        right: -300px;
-        margin-top: -55px!important;
+        right: 20px;
+        margin-top: -55px !important;
+    }
+    .wow {
+        /* Example Placeholder: Adjust as needed for mobile */
     }
 }
 
-@media screen and (max-width: 991px) {
+/* Medium Devices and Up (768px and above) */
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+/* Large Devices (992px and above) */
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+    img.footer-logo-image.img-fluid {
+        width: 150px;
+        height: auto;
+    }
+    .btn-book {
+        right: 18px;
+        margin-top: -55px !important;
+    }
+}
+
+/* Large Devices (up to 991px) */
+@media (max-width: 991px) {
     .site-menu > li {
-        display: none!important;
+        display: none !important;
+    }
+    .mobile-dropdown::before {
+        background-color: transparent;
+    }
+    .slicknav_nav::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 130px;
+        top: -8px;
+        display: flex;
+        background-color: white;
+        transform: rotate(45deg);
+        border-radius: var(--standard-border-radius);
+    }
+    .logo {
+        left: 20px;
+    }
+
+    .site-nav {
+        padding-top: 0 !important;
+        top: -32px !important;
+    }
+    .btn-book {
+        margin-top: 0px !important;
+        right: 60px;
     }
 }
 
-@media screen and (min-width: 991px) {
+/* Large Tablets and Above (from 991px and above) */
+@media (min-width: 991px) {
     .slicknav_btn {
         display: none;
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .btn-book {
-        right: -695px;
-        margin-top: -55px!important;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .btn-book {
-        right: -830px;
-        margin-top: -55px!important;
-    }
-
-}
 
 .top-bar a {
     color: var(--light);
@@ -301,21 +351,6 @@ a:hover {
     left: 15px;
 }
 
-@media (max-width: 991.98px) {
-    .logo {
-        left: 20px;
-    }
-
-    .site-nav {
-        padding-top: 0!important;
-        top: -32px!important;
-    }
-    .btn-book {
-        margin-top: 0px!important;
-        right: -300px;
-    }
-}
-
 .logo:hover {
     color: #ffffff;
 }
@@ -326,7 +361,6 @@ a:hover {
 
 .btn-book {
     position: absolute;
-    /* right: 15px; */
     margin-top: -22px;
 }
 
@@ -504,24 +538,6 @@ a:hover {
     background-color: white;
     transform: rotate(45deg);
     border-radius: var(--standard-border-radius);
-}
-
-@media (max-width: 991px) {
-    .mobile-dropdown::before {
-        background-color: transparent;
-    }
-    .slicknav_nav::before {
-        content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 130px;
-    top: -8px;
-    display: flex;
-    background-color: white;
-    transform: rotate(45deg);
-    border-radius: var(--standard-border-radius);
-    }
 }
 
 .site-nav .site-navigation .site-menu .has-children .dropdown>li>a:hover {
@@ -1205,14 +1221,6 @@ a:hover {
     background: linear-gradient(rgb(48 80 79 / 25%), rgb(48 80 79 / 20%)); /* Adjust the opacity as needed */
 }
 
-@media (max-width: 575px) {
-    .overlay {
-        height: 352px;
-    }
-}
-
-
-
 /*---------------------
   Section Title
 -----------------------*/
@@ -1338,24 +1346,7 @@ i.fa.fa-dot-circle {
     z-index: 1;
 }
 
-@media (min-width: 768px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
 
-@media (min-width: 992px) {
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-
-    img.footer-logo-image.img-fluid {
-        width: 150px;
-        height: auto;
-    }
-}
 
 .testimonial-carousel .owl-item .testimonial-text,
 .testimonial-carousel .owl-item.center .testimonial-text * {
